@@ -22,7 +22,8 @@ header .nav-index .nav-direction {
   gap: 1.3rem;
 }
 
-.nav-main nav ul, .nav-main nav li {
+.nav-main nav ul,
+.nav-main nav li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -31,7 +32,8 @@ header .nav-index .nav-direction {
   display: block;
   text-decoration: none;
 }
-.nav-main nav a:hover, .nav-main nav a:visited {
+.nav-main nav a:hover,
+.nav-main nav a:visited {
   text-decoration: none;
 }
 .nav-main .menu-bar {
@@ -103,11 +105,15 @@ header .nav-index .nav-direction {
   .nav-main .menu-bar > li:hover-within > [aria-haspopup=true] ~ ul {
     display: flex;
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true]:hover, .nav-main .menu-bar > li:hover-within > [aria-haspopup=true], .nav-main .menu-bar > li:hover > a {
+  .nav-main .menu-bar > li > [aria-haspopup=true]:hover,
+  .nav-main .menu-bar > li:hover-within > [aria-haspopup=true],
+  .nav-main .menu-bar > li:hover > a {
     background: #177E89;
     color: #ffffff;
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true]:hover:after, .nav-main .menu-bar > li:hover-within > [aria-haspopup=true]:after, .nav-main .menu-bar > li:hover > a:after {
+  .nav-main .menu-bar > li > [aria-haspopup=true]:hover:after,
+  .nav-main .menu-bar > li:hover-within > [aria-haspopup=true]:after,
+  .nav-main .menu-bar > li:hover > a:after {
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowTop.svg#light");
   }
   .nav-main .mega-menu {
@@ -142,14 +148,19 @@ header .nav-index .nav-direction {
   .nav-main .mega-menu--multiLevel li:hover-within > [aria-haspopup=true] ~ ul {
     display: block;
   }
-  .nav-main .mega-menu--multiLevel li:hover > [aria-haspopup=true], .nav-main .mega-menu--multiLevel li:hover > a, .nav-main .mega-menu--multiLevel li:hover-within > [aria-haspopup=true], .nav-main .mega-menu--multiLevel li:hover-within > a {
+  .nav-main .mega-menu--multiLevel li:hover > [aria-haspopup=true],
+  .nav-main .mega-menu--multiLevel li:hover > a,
+  .nav-main .mega-menu--multiLevel li:hover-within > [aria-haspopup=true],
+  .nav-main .mega-menu--multiLevel li:hover-within > a {
     background: tint(#177E89, 85%);
     color: #136a73;
   }
-  .nav-main .mega-menu--multiLevel [aria-haspopup=true] ~ ul, .nav-main .mega-menu--multiLevel [aria-haspopup=true] {
+  .nav-main .mega-menu--multiLevel [aria-haspopup=true] ~ ul,
+  .nav-main .mega-menu--multiLevel [aria-haspopup=true] {
     border-left: 1px solid #f0f0f0;
   }
-  .nav-main .mega-menu--multiLevel [aria-haspopup=true] ~ ul:hover, .nav-main .mega-menu--multiLevel [aria-haspopup=true]:hover {
+  .nav-main .mega-menu--multiLevel [aria-haspopup=true] ~ ul:hover,
+  .nav-main .mega-menu--multiLevel [aria-haspopup=true]:hover {
     display: block;
   }
   .nav-main .mega-menu--multiLevel [aria-haspopup=true] ~ ul {
@@ -158,9 +169,11 @@ header .nav-index .nav-direction {
     height: 100%;
   }
   .nav-main .mega-menu--flat > * {
-    flex: 1;
+    width: 100%;
   }
-  .nav-main .mobile-menu-trigger, .nav-main .mobile-menu-header, .nav-main .mobile-menu-back-item {
+  .nav-main .mobile-menu-trigger,
+  .nav-main .mobile-menu-header,
+  .nav-main .mobile-menu-back-item {
     display: none;
   }
 }
@@ -168,7 +181,9 @@ header .nav-index .nav-direction {
   .nav-main .nav {
     padding: 20px;
   }
-  .nav-main .mobile-menu-trigger, .nav-main .mobile-menu-header, .nav-main .mobile-menu-back-item {
+  .nav-main .mobile-menu-trigger,
+  .nav-main .mobile-menu-header,
+  .nav-main .mobile-menu-back-item {
     display: block;
   }
   .nav-main .mobile-menu-trigger {
@@ -263,7 +278,8 @@ header .nav-index .nav-direction {
   .nav-main .mobile-menu-trigger:hover ~ ul {
     left: 0;
   }
-  .nav-main .menu-bar:hover, .nav-main .menu-bar:hover-within {
+  .nav-main .menu-bar:hover,
+  .nav-main .menu-bar:hover-within {
     left: 0;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover ~ ul {
@@ -272,7 +288,8 @@ header .nav-index .nav-direction {
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul {
     margin-top: calc(1.4em + 40px);
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover, .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover-within {
+  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover,
+  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover-within {
     left: 0;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul [aria-haspopup=true]:hover ~ ul {
@@ -330,4 +347,45 @@ header .nav-index .nav-direction {
     opacity: 1;
     transform: scaleX(1);
   }
+}
+
+.mega-menu-content ul,
+.mega-menu-content li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.mega-menu-content ul li:first-child a {
+  font-weight: bold;
+}
+.mega-menu-content ul li a {
+  display: inline-block;
+  float: left;
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  color: black;
+}
+.mega-menu-content ul ul {
+  display: flex;
+}
+.mega-menu-content .tab-content {
+  width: 100%;
+  padding: 15px;
+  margin-top: 50px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.mega-menu-content .tab-content img {
+  width: 64%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mega-menu-content .tab-content span {
+  text-align: center;
+}
+
+.mega-menu-content li.active,
+.mega-menu-content ul li:hover li {
+  display: block !important;
 }/*# sourceMappingURL=header.css.map */

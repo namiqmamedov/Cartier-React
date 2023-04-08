@@ -7,12 +7,15 @@ import {AiOutlineHeart} from 'react-icons/ai'
 import {AiOutlineUser} from 'react-icons/ai'
 import {RiMapPin2Line} from 'react-icons/ri'
 import {BsBag} from 'react-icons/bs'
+import mega01 from '../../assets/images/mega01.jpg'
+import mega02 from '../../assets/images/mega02.webp'
 
 const Header = () => {
-    return (
-        <header>
-            <Container>
-                <Row>
+    return ( 
+    
+    <header>
+        <Container>
+            <Row>
                 <nav className='nav-index'>
                     {/* {nav_links.map((item,index) => (
                         <NavLink
@@ -23,34 +26,33 @@ const Header = () => {
                         </NavLink>
                     ))} */}
                     <div className="nav-index-top">
-                        
-                    <Col lg='3' className="nav-content-first">
-                        <a href="#">
-                            UNITED STATES
-                        </a>
-                        <a href="#">
-                            CONTACT US
-                        </a>
-                        <a href="#">
-                            SERVICES
-                        </a>
-                    </Col>
 
-                    <Col lg='6' className="logo_index_web">
-                        <a href="#">
-                            <img className='logo-index' src={logo} alt=""/>
-                        </a>
-                    </Col>
+                        <Col lg='3' className="nav-content-first">
+                            <a href="#">
+                                UNITED STATES
+                            </a>
+                            <a href="#">
+                                CONTACT US
+                            </a>
+                            <a href="#">
+                                SERVICES
+                            </a>
+                        </Col>
 
-                    <Col lg='3' className="nav-direction">
-                        <AiOutlineHeart/>
-                        <AiOutlineUser/>
-                        <RiMapPin2Line/>
-                        <BsBag/>
-                    </Col>
+                        <Col lg='6' className="logo_index_web">
+                            <a href="#">
+                                <img className='logo-index' src={logo} alt=""/>
+                            </a>
+                        </Col>
+
+                        <Col lg='3' className="nav-direction">
+                            <AiOutlineHeart/>
+                            <AiOutlineUser/>
+                            <RiMapPin2Line/>
+                            <BsBag/>
+                        </Col>
                     </div>
 
-                    
                     <div className="nav-main">
                         <div class="nav">
                             <nav>
@@ -61,123 +63,89 @@ const Header = () => {
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
                                             aria-haspopup="true">WATCHES AND WONDERS</a>
-                                        <ul class="mega-menu mega-menu--multiLevel">
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">
-                                                    High Jewelry</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.1.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="menu-link menu-list-link"
-                                                            aria-haspopup="true">1.1.2 Flyout link</a>
-                                                        <ul class="menu menu-list">
-                                                            <li>
-                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.1 Page link</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.2 Page link</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.1.3 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">
-                                                    JEWELRY</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.2.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.2.2 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">
-                                                    WATCHES</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.3.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.3.2 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link">1.4 Page link</a>
-                                            </li>
-                                            <li class="mobile-menu-back-item">
-                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
-                                            </li>
-                                        </ul>
                                     </li>
-                                    <li>
+                                    <li className='mega-menu-content'>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
                                             aria-haspopup="true">HIGH JEWELRY</a>
-                                        <ul class="mega-menu mega-menu--flat">
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.1 Page link header</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.2 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.3 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.2 Page link header</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.2 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.3 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.3 Page link header</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.2 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="mobile-menu-back-item">
-                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
-                                            </li>
-                                        </ul>
+
+                                            <ul className='mega-menu mega-menu--flat'>
+                                                <li >
+                                                    <a href="#">LATEST COLLECTIONS</a>
+                                                    <ul>
+                                                        <li className='active'>
+                                                            <div className="tab-content">
+                                                                <img src={mega01} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className='active' >
+                                                            <div className="tab-content">
+                                                                <img src={mega02} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className='active'>
+                                                            <div className="tab-content">
+                                                                <img src={mega02} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                {/* <li>
+                                                    <a href="#">MARKERS OF STYLE</a>
+                                                    <ul>
+                                                        <li>
+                                                            <div className="tab-content">
+                                                                <h2>Second</h2>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut
+                                                                    optio quisquam.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">ICONIC PANTHERE</a>
+                                                    <ul>
+                                                        <li>
+                                                            <div className="tab-content">
+                                                                <h2>Third</h2>
+                                                                <p>qw ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut optio
+                                                                    quisquam.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">ICONIC PANTHERE</a>
+                                                    <ul>
+                                                        <li>
+                                                            <div className="tab-content">
+                                                                <h2>Third</h2>
+                                                                <p>qw ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut optio
+                                                                    quisquam.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">LIVING LEGACY</a>
+                                                    <ul>
+                                                        <li>
+                                                            <div className="tab-content">
+                                                                <h2>Third</h2>
+                                                                <p>qw ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut optio
+                                                                    quisquam.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li> */}
+                                            </ul>
+
                                     </li>
                                     <li>
                                         <a
@@ -384,9 +352,11 @@ const Header = () => {
                         </div>
                     </div>
                 </nav>
-                </Row>
-            </Container>
-        </header>
+            </Row>
+        </Container>
+    </header> 
+       
+
     )
 }
 
