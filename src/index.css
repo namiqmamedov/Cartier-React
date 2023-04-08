@@ -1,0 +1,38 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* reset default style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base style */
+
+
+a {
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  padding: 60px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 40px 0px;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,21 @@
+header .nav-index {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+header .nav-index .nav-content-first {
+  display: flex;
+  gap: 1rem;
+}
+header .nav-index .logo-index {
+  width: 23%;
+  margin-top: -13px;
+}
+header .nav-index .logo_index_web {
+  text-align: center;
+}
+header .nav-index .nav-direction {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.3rem;
+}/*# sourceMappingURL=header.css.map */

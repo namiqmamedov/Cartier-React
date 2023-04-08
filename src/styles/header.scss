@@ -1,0 +1,27 @@
+header {
+    .nav-index {
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+
+
+        .nav-content-first{
+            display: flex;
+            gap: 1rem;
+        }
+        .logo-index {
+            width: 23%;
+            margin-top: -13px;
+        }
+
+        .logo_index_web{
+            text-align: center;
+        }
+
+        .nav-direction {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.3rem;
+        }
+    }
+}
