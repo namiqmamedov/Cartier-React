@@ -9,10 +9,21 @@ import {RiMapPin2Line} from 'react-icons/ri'
 import {BsBag} from 'react-icons/bs'
 import mega01 from '../../assets/images/mega01.jpg'
 import mega02 from '../../assets/images/mega02.webp'
+import mega03 from '../../assets/images/mega03.webp'
+import mega04 from '../../assets/images/mega04.webp'
+import mega05 from '../../assets/images/mega05.webp'
+import mega06 from '../../assets/images/mega06.webp'
+import mega07 from '../../assets/images/mega07.webp'
+import mega08 from '../../assets/images/mega08.webp'
+import mega09 from '../../assets/images/mega09.webp'
+import mega10 from '../../assets/images/mega10.webp'
+import mega11 from '../../assets/images/mega11.webp'
 
 const Header = () => {
     return ( 
+    <>
     
+   
     <header>
         <Container>
             <Row>
@@ -69,46 +80,74 @@ const Header = () => {
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
                                             aria-haspopup="true">HIGH JEWELRY</a>
-
-                                            <ul className='mega-menu mega-menu--flat'>
+                                        <ul>
                                                 <li >
                                                     <a href="#">LATEST COLLECTIONS</a>
                                                     <ul>
                                                         <li className='active'>
+                                                        <div className="tababa">
                                                             <div className="tab-content">
                                                                 <img src={mega01} alt="" />
                                                                 <span>BEAUTES DU MONDE</span>
                                                             </div>
-                                                        </li>
-                                                        <li className='active' >
                                                             <div className="tab-content">
                                                                 <img src={mega02} alt="" />
                                                                 <span>BEAUTES DU MONDE</span>
                                                             </div>
-                                                        </li>
-
-                                                        <li className='active'>
                                                             <div className="tab-content">
-                                                                <img src={mega02} alt="" />
+                                                                <img src={mega03} alt="" />
                                                                 <span>BEAUTES DU MONDE</span>
                                                             </div>
+                                                            <div className="tab-content">
+                                                                <img src={mega04} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                        </div>
                                                         </li>
-                                                        
                                                     </ul>
                                                 </li>
-                                                {/* <li>
+                                                
+                                                <li>
                                                     <a href="#">MARKERS OF STYLE</a>
                                                     <ul>
                                                         <li>
+                                                        <div className="tababa">
+
                                                             <div className="tab-content">
-                                                                <h2>Second</h2>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut
-                                                                    optio quisquam.</p>
+                                                                <img src={mega05} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
                                                             </div>
+                                                            <div className="tab-content">
+                                                                <img src={mega06} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                            <div className="tab-content">
+                                                                <img src={mega07} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                            <div className="tab-content">
+                                                                <img src={mega08} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                        </div>
                                                         </li>
                                                     </ul>
                                                 </li>
+
                                                 <li>
+                                                    <a href="#">MARKERS OF STYLE</a>
+                                                    <ul>
+                                                        <li>
+                                                           <div className="tababa">
+                                                           <div className="tab-content">
+                                                                <img src={mega09} alt="" />
+                                                                <span>BEAUTES DU MONDE</span>
+                                                            </div>
+                                                           </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                {/* <li>
                                                     <a href="#">ICONIC PANTHERE</a>
                                                     <ul>
                                                         <li>
@@ -125,7 +164,7 @@ const Header = () => {
                                                     <ul>
                                                         <li>
                                                             <div className="tab-content">
-                                                                <h2>Third</h2>
+                                                                <h2>Fourth</h2>
                                                                 <p>qw ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut optio
                                                                     quisquam.</p>
                                                             </div>
@@ -143,9 +182,8 @@ const Header = () => {
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                </li> */}
-                                            </ul>
-
+                                                </li>   */}
+                                        </ul>
                                     </li>
                                     <li>
                                         <a
@@ -355,6 +393,13 @@ const Header = () => {
             </Row>
         </Container>
     </header> 
+
+
+                                         
+
+    </>
+       
+
        
 
     )

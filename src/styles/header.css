@@ -27,6 +27,7 @@ header .nav-index .nav-direction {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 50px;
 }
 .nav-main nav a {
   display: block;
@@ -102,17 +103,17 @@ header .nav-index .nav-direction {
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover {
     display: flex;
   }
-  .nav-main .menu-bar > li:hover-within > [aria-haspopup=true] ~ ul {
+  .nav-main .menu-bar > li:focus-within > [aria-haspopup=true] ~ ul {
     display: flex;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover,
-  .nav-main .menu-bar > li:hover-within > [aria-haspopup=true],
+  .nav-main .menu-bar > li:focus-within > [aria-haspopup=true],
   .nav-main .menu-bar > li:hover > a {
     background: #177E89;
     color: #ffffff;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover:after,
-  .nav-main .menu-bar > li:hover-within > [aria-haspopup=true]:after,
+  .nav-main .menu-bar > li:focus-within > [aria-haspopup=true]:after,
   .nav-main .menu-bar > li:hover > a:after {
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowTop.svg#light");
   }
@@ -145,13 +146,13 @@ header .nav-index .nav-direction {
     transform-origin: left;
     animation: flyout 0.2s ease-out;
   }
-  .nav-main .mega-menu--multiLevel li:hover-within > [aria-haspopup=true] ~ ul {
+  .nav-main .mega-menu--multiLevel li:focus-within > [aria-haspopup=true] ~ ul {
     display: block;
   }
   .nav-main .mega-menu--multiLevel li:hover > [aria-haspopup=true],
   .nav-main .mega-menu--multiLevel li:hover > a,
-  .nav-main .mega-menu--multiLevel li:hover-within > [aria-haspopup=true],
-  .nav-main .mega-menu--multiLevel li:hover-within > a {
+  .nav-main .mega-menu--multiLevel li:focus-within > [aria-haspopup=true],
+  .nav-main .mega-menu--multiLevel li:focus-within > a {
     background: tint(#177E89, 85%);
     color: #136a73;
   }
@@ -275,32 +276,32 @@ header .nav-index .nav-direction {
     margin-right: 10px;
     display: inline-block;
   }
-  .nav-main .mobile-menu-trigger:hover ~ ul {
+  .nav-main .mobile-menu-trigger:focus ~ ul {
     left: 0;
   }
   .nav-main .menu-bar:hover,
-  .nav-main .menu-bar:hover-within {
+  .nav-main .menu-bar:focus-within {
     left: 0;
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true]:hover ~ ul {
+  .nav-main .menu-bar > li > [aria-haspopup=true]:focus ~ ul {
     left: 0;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul {
     margin-top: calc(1.4em + 40px);
   }
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover,
-  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover-within {
+  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:focus-within {
     left: 0;
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul [aria-haspopup=true]:hover ~ ul {
+  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul [aria-haspopup=true]:focus ~ ul {
     max-height: 500px;
     animation: dropdown 0.3s forwards;
   }
-  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul li:hover-within > [aria-haspopup=true] ~ ul {
+  .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul li:focus-within > [aria-haspopup=true] ~ ul {
     max-height: 500px;
     transform: scaleY(1);
   }
-  .nav-main .menu-bar > li:hover-within ~ .mobile-menu-header a {
+  .nav-main .menu-bar > li:focus-within ~ .mobile-menu-header a {
     visibility: hidden;
   }
 }
@@ -349,11 +350,17 @@ header .nav-index .nav-direction {
   }
 }
 
+.mega-menu-content {
+  width: 200px;
+}
 .mega-menu-content ul,
 .mega-menu-content li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.mega-menu-content ul {
+  width: 200px;
 }
 .mega-menu-content ul li:first-child a {
   font-weight: bold;
@@ -365,19 +372,31 @@ header .nav-index .nav-direction {
   font-size: 0.85rem;
   color: black;
 }
+.mega-menu-content ul ul li {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  display: none !important;
+}
 .mega-menu-content ul ul {
   display: flex;
 }
-.mega-menu-content .tab-content {
+.mega-menu-content .tababa {
+  position: relative;
   width: 100%;
-  padding: 15px;
-  margin-top: 50px;
-  background: #ffffff;
+  background: white;
+  height: 470px;
   display: flex;
-  flex-direction: column;
+}
+.mega-menu-content .tab-content {
+  position: relative;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .mega-menu-content .tab-content img {
-  width: 64%;
+  width: 76%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -387,5 +406,5 @@ header .nav-index .nav-direction {
 
 .mega-menu-content li.active,
 .mega-menu-content ul li:hover li {
-  display: block !important;
+  display: flex !important;
 }/*# sourceMappingURL=header.css.map */
