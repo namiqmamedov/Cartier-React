@@ -48,6 +48,7 @@ header .nav-index .nav-direction {
   transition: background 0.2s, color 0.2s;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .nav-main .menu-link[aria-haspopup=true]:after {
@@ -97,8 +98,6 @@ header .nav-index .nav-direction {
   }
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover ~ ul {
     display: flex;
-    transform-origin: top;
-    animation: dropdown 0.2s ease-out;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true] ~ ul:hover {
     display: flex;
@@ -109,8 +108,7 @@ header .nav-index .nav-direction {
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover,
   .nav-main .menu-bar > li:focus-within > [aria-haspopup=true],
   .nav-main .menu-bar > li:hover > a {
-    background: #177E89;
-    color: #ffffff;
+    color: black;
   }
   .nav-main .menu-bar > li > [aria-haspopup=true]:hover:after,
   .nav-main .menu-bar > li:focus-within > [aria-haspopup=true]:after,
@@ -350,9 +348,6 @@ header .nav-index .nav-direction {
   }
 }
 
-.mega-menu-content {
-  width: 200px;
-}
 .mega-menu-content ul,
 .mega-menu-content li {
   list-style-type: none;
@@ -383,28 +378,38 @@ header .nav-index .nav-direction {
   display: flex;
 }
 .mega-menu-content .tababa {
-  position: relative;
+  position: absolute;
   width: 100%;
+  margin: 0 auto;
   background: white;
   height: 470px;
   display: flex;
 }
 .mega-menu-content .tab-content {
   position: relative;
-  width: 25%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 .mega-menu-content .tab-content img {
-  width: 76%;
+  width: 89%;
   margin-left: auto;
   margin-right: auto;
 }
 .mega-menu-content .tab-content span {
   text-align: center;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
 }
 
 .mega-menu-content li.active,
 .mega-menu-content ul li:hover li {
   display: flex !important;
+  justify-content: center;
 }/*# sourceMappingURL=header.css.map */
