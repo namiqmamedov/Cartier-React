@@ -1,4 +1,6 @@
 header {
+    -webkit-box-shadow: 0 0.0625rem 0 0 rgba(0,0,0,.15);
+    box-shadow: 0 0.0625rem 0 0 rgba(0,0,0,.15);
     .nav-index {
         padding-top: 1.5rem;
 
@@ -100,6 +102,7 @@ header {
     @media all and (min-width: 951px) {
         .nav {
             background: #ffffff;
+            margin-bottom: 16px;
         }
 
         .nav>nav {
