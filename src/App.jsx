@@ -1,9 +1,11 @@
-import Layout from './components/Layout/Layout'
+import { useState } from 'react'
+import Header from './components/Header/Header'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <Layout/>
+    <Header/>
   )
 }
 
