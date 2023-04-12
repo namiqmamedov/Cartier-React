@@ -1,3 +1,6 @@
+header {
+  box-shadow: 0 0.0625rem 0 0 rgba(0, 0, 0, 0.15);
+}
 header .nav-index {
   padding-top: 1.5rem;
 }
@@ -80,6 +83,7 @@ header .nav-index .nav-direction {
 @media all and (min-width: 951px) {
   .nav-main .nav {
     background: #ffffff;
+    margin-bottom: 16px;
   }
   .nav-main .nav > nav {
     margin: 0 auto;
@@ -376,6 +380,19 @@ header .nav-index .nav-direction {
 }
 .mega-menu-content ul ul {
   display: flex;
+}
+.mega-menu-content .mega-li {
+  width: 100%;
+  z-index: 1111111111111;
+}
+.mega-menu-content .mega-wrapper {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  height: 470px;
+  display: flex;
+  left: 0;
 }
 .mega-menu-content .tababa {
   position: absolute;

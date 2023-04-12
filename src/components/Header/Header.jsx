@@ -91,7 +91,8 @@ const Header = () => {
                                             class="menu-link menu-bar-link"
                                             aria-haspopup="true">HIGH JEWELRY</a>
                                         <ul>
-                                                <li >
+                                                <li className='mega-li'>
+                                                    <div className="mega-wrapper">
                                                     <a href="#">LATEST COLLECTIONS</a>
                                                     <ul>
                                                         <li className='active'>
@@ -115,14 +116,15 @@ const Header = () => {
                                                         </div>
                                                         </li>
                                                     </ul>
+                                                    </div>
                                                 </li>
                                                 
-                                                <li>
+                                                <li className='mega-li'>
                                                     <a href="#">MARKERS OF STYLE</a>
                                                     <ul>
-                                                        <li>
+                                                        <li className='mega-li'>
+                                                        <div className="mega-wrapper">
                                                         <div className="tababa">
-
                                                             <div className="tab-content">
                                                                 <img src={mega05} alt="" />
                                                                 <span>BEAUTES DU MONDE</span>
@@ -140,14 +142,16 @@ const Header = () => {
                                                                 <span>BEAUTES DU MONDE</span>
                                                             </div>
                                                         </div>
+                                                        </div>
                                                         </li>
                                                     </ul>
                                                 </li>
 
-                                                <li>
+                                                <li className='mega-li'>
                                                     <a href="#">MARKERS OF STYLE</a>
                                                     <ul>
-                                                        <li>
+                                                        <li className='mega-li'>
+                                                           <div className="mega-wrapper">
                                                            <div className="tababa">
                                                            <div className="tab-content">
                                                                 <img src={mega09} alt="" />
@@ -157,6 +161,7 @@ const Header = () => {
                                                                 <img src={mega10} alt="" />
                                                                 <span>BEAUTES DU MONDE</span>
                                                             </div>
+                                                           </div>
                                                            </div>
                                                         </li>
                                                     </ul>
