@@ -1,6 +1,43 @@
-.footer-index ul li {
+.footer-index .footer-main {
+  display: flex;
+  padding: 0 54px;
+}
+.footer-index .footer-main .router-item ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-index .footer-main .router-item ul li {
   list-style-type: none;
 }
-.footer-index .router-title {
-  text-transform: uppercase;
+.footer-index .footer-main .router-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-index .footer-main .router-title {
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.0525rem;
+}
+.footer-index .footer-main .router-index {
+  width: 40%;
+}
+.footer-index .footer-main .social-link {
+  width: 20%;
+}
+.footer-index .footer-main .social-link ul {
+  padding-left: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-index .footer-main .social-link ul li {
+  list-style-type: none;
+}
+.footer-index .footer-main .social-link ul li svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=footer.css.map */
