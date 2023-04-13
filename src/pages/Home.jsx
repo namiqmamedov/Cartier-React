@@ -20,16 +20,14 @@ import cardImg02 from '../assets/images/cardImg02.jpg'
 import cardImg03 from '../assets/images/cardImg03.jpg'
 import cardImg04 from '../assets/images/cardImg04.jpg'
 import cardImg05 from '../assets/images/cardImg05.jpg'
-import moduleImg01 from '../assets/images/shipping.svg'
-import moduleImg02 from '../assets/images/returns.svg'
-import moduleImg03 from '../assets/images/gift_wrapping.svg'
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'
+import Module from '../components/UI/module-item/Module';
 
 const Home = () => {
     return ( <> <main>
-        <Container>
+        <Container className='main-container'>
             <Row>
                 <div className="hero-index">
                     <div class="youtube-player pristine" data-video-id="FiSxg_LNEFU">
@@ -119,10 +117,10 @@ const Home = () => {
                     <Container>
                         <Row>
                             <div className="card-media">
-                                <div className="module-thumbnail col-lg-6">
+                                <div className="module-thumbnail col-lg-6  col-sm-6 ">
                                     <img src={moduleCenter01} alt="module image"/>
                                 </div>
-                                <div className="module-content col-lg-6">
+                                <div className="module-content col-lg-6 col-sm-6">
                                     <h1>
                                         Exhibition Closing Soon
                                     </h1>
@@ -208,12 +206,7 @@ const Home = () => {
         </Container>
 
         <div className="module-container">
-            <Link className="module-item">
-                <img src={moduleImg01} alt="module image"/>
-                <div className="module-title">
-                    <Link>Complimentary Delivery</Link>
-                </div>
-            </Link>
+            <Module/>
         </div>
 
         <div className="footer-banner text-center">

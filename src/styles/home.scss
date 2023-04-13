@@ -195,6 +195,7 @@
     padding-top: 3.35rem;
     display: flex;
     justify-content: center;
+    gap: 4rem;
 
     img {
         width: 10.4%;
@@ -253,6 +254,64 @@
         color: white;
         border-radius: 0;
         font-family: 'Montserrat', sans-serif;
-        margin-top: 13.5px;    
+        margin-top: 13.5px;
     }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .hero-index {
+        iframe {
+            height: 355px !important;
+        }
+    }
+
+    .module-center__item {
+        .card-media {
+            flex-wrap: wrap;
+        }
+
+        .link-actions {
+            text-align: center;
+        }
+    }
+
+    .module-container {
+        flex-wrap: wrap;
+    }
+
+    .footer-banner {
+        .MuiFormControl-root {
+            width: 60% !important;
+        }
+
+        button {
+            width: 30%;
+        }
+    }
+
+    .partner-content {
+        flex-direction: column;
+
+        a {
+            width: 25% !important;
+        }
+    }
+
+    .footer-secondary {
+        .secondary-content {
+            height: 91px;
+            padding: 0 25px;
+            margin-top: 2.3rem;
+            margin-bottom: 2.3rem;
+            align-items: start;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
 }

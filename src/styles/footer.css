@@ -1,3 +1,9 @@
+.footer-index {
+  padding-top: 43px;
+  padding-bottom: 43px;
+  border-top: 1px solid rgba(29, 28, 28, 0.2);
+  border-bottom: 1px solid rgba(29, 28, 28, 0.2);
+}
 .footer-index .footer-main {
   display: flex;
   padding: 0 54px;
@@ -10,6 +16,7 @@
 }
 .footer-index .footer-main .router-item ul li {
   list-style-type: none;
+  max-width: 295px;
 }
 .footer-index .footer-main .router-wrapper {
   width: 80%;
@@ -29,15 +36,56 @@
 .footer-index .footer-main .social-link {
   width: 20%;
 }
+.footer-index .footer-main .social-link h2 {
+  padding-bottom: 15px;
+}
 .footer-index .footer-main .social-link ul {
   padding-left: 0;
   display: flex;
   gap: 1.5rem;
+  padding-bottom: 25px;
 }
 .footer-index .footer-main .social-link ul li {
   list-style-type: none;
 }
 .footer-index .footer-main .social-link ul li svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.footer-index .footer-main .social-link .footer-bottom img {
+  width: 35%;
+}
+
+.footer-partners {
+  text-align: center;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem;
+}
+.footer-partners .partner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.footer-partners .partner-content a {
+  width: 8%;
+}
+.footer-partners .partner-content img {
+  width: 100%;
+}
+
+.footer-secondary {
+  background: #D50032;
+}
+.footer-secondary .secondary-content {
+  padding: 0 65px;
+  display: flex;
+  justify-content: space-between;
+  height: 76px;
+  align-items: center;
+}
+.footer-secondary .secondary-content span {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=footer.css.map */
