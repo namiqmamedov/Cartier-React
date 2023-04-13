@@ -9,6 +9,8 @@ import {
 } from 'reactstrap'
 import {Link} from 'react-router-dom'
 import '../styles/home.css'
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 import mainImg01 from '../assets/images/mainModule01.webp'
 import mainImg02 from '../assets/images/mainModule02.webp'
 import mainImg03 from '../assets/images/mainModule03.webp'
@@ -213,7 +215,25 @@ const Home = () => {
                 </div>
             </Link>
         </div>
-    </main> </>
+
+        <div className="footer-banner text-center">
+            <Container>
+                <Row>
+                  <form action="#" method='post'>
+                  <div className="subscribe__main-index">
+                   <p className="subscribe__banner-title">
+                        Subscribe to our Newsletter
+                    </p>
+                    <TextField id="standard-basic" placeholder='your@email.com' label="Email" variant="standard"/>
+                    <Button variant="outlined">SUBSCRIBE</Button>
+                   </div>
+                  </form>
+                </Row>
+            </Container>
+        </div>
+
+    </main>
+     </>
     )
 }
 

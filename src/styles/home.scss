@@ -203,6 +203,7 @@
 
     .module-item {
         text-align: center;
+
         a {
             display: flex;
             font-size: 16px;
@@ -228,5 +229,30 @@
                 content: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'><path fill='%231D1C1C' d='M9 0c-.6 0-.9.6-.9 1.2s.6 1.2 1.2 1.2h11.1L.2 22.3c-.3.3-.3 1.2 0 1.5.3.3 1.2.3 1.5 0L21.6 3.9V15c0 .6.6 1.2 1.2 1.2.6-.3 1.2-.6 1.2-1.2V0H9z' /></svg>");
             }
         }
+    }
+}
+
+.footer-banner {
+    padding: 5rem 0;
+
+    p {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        letter-spacing: .125rem;
+    }
+
+    .MuiFormControl-root {
+        width: 23%;
+    }
+
+    button {
+        width: 11%;
+        background: black;
+        color: white;
+        border-radius: 0;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 13.5px;    
     }
 }
