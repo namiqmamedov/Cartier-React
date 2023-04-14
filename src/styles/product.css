@@ -24,4 +24,29 @@
   max-width: 525px;
   margin: 0 auto;
   font-size: 15px;
+}
+
+.product__main-item .product__first-element {
+  display: flex;
+  justify-content: space-between;
+}
+.product__main-item .product__first-element .product-model {
+  margin-right: auto;
+  padding-left: 35px;
+}
+.product__main-item .product__first-element .product-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  background-color: transparent;
+}
+.product__main-item .product__first-element .product-wrapper .grid {
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+.product__main-item .product__first-element .product-wrapper .MuiButtonBase-root {
+  padding: 0;
+  margin-bottom: 4px;
+  margin-left: 10px;
 }/*# sourceMappingURL=product.css.map */
