@@ -114,3 +114,31 @@
         }
     }
 }
+
+
+@media screen and (max-width: 576px){
+    .footer-index{
+        .footer-main{
+            flex-direction: column;
+        }
+        .router-wrapper{
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .social-link{
+            width: 100% !important;
+            text-align: center;
+
+            ul{
+                justify-content: center;
+            }
+
+            .footer-bottom{
+                img{
+                    width: 24% !important;
+                }
+            }
+        }
+    }
+}

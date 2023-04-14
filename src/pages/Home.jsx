@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {
     Container,
     Row,
@@ -15,18 +15,19 @@ import mainImg01 from '../assets/images/mainModule01.webp'
 import mainImg02 from '../assets/images/mainModule02.webp'
 import mainImg03 from '../assets/images/mainModule03.webp'
 import moduleCenter01 from '../assets/images/moduleCenter01.webp'
-import cardImg01 from '../assets/images/cardImg01.jpg'
-import cardImg02 from '../assets/images/cardImg02.jpg'
-import cardImg03 from '../assets/images/cardImg03.jpg'
-import cardImg04 from '../assets/images/cardImg04.jpg'
-import cardImg05 from '../assets/images/cardImg05.jpg'
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'
 import Module from '../components/UI/module-item/Module';
+import Carousel from '../components/UI/slider/Carousel';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
+
 
 const Home = () => {
     return ( <> <main>
+
         <Container className='main-container'>
             <Row>
                 <div className="hero-index">
@@ -147,60 +148,7 @@ const Home = () => {
                     <p className='subtitle text-center'>
                         Free-spirited, legendary and forever enchanting.
                     </p>
-                    <Swiper
-                        modules={[Navigation, A11y]}
-                        spaceBetween={30}
-                        slidesPerView={3.4}
-                        navigation>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg01} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg02} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg03} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg04} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg05} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-index">
-                                <img className='image' id='img-card' src={cardImg05} alt=""/>
-                                <figcaption>
-                                    <h3>DISCOVER</h3>
-                                </figcaption>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
+                        <Carousel/>
                 </div>
             </Row>
         </Container>

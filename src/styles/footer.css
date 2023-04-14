@@ -88,4 +88,24 @@
   color: white;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 576px) {
+  .footer-index .footer-main {
+    flex-direction: column;
+  }
+  .footer-index .router-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer-index .social-link {
+    width: 100% !important;
+    text-align: center;
+  }
+  .footer-index .social-link ul {
+    justify-content: center;
+  }
+  .footer-index .social-link .footer-bottom img {
+    width: 24% !important;
+  }
 }/*# sourceMappingURL=footer.css.map */

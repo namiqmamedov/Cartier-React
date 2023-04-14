@@ -1,5 +1,4 @@
 import React from 'react'
-import {Container, Row, Col} from 'reactstrap'
 import moduleImg01 from '../../../assets/images/shipping.svg'
 import moduleImg02 from '../../../assets/images/returns.svg'
 import moduleImg03 from '../../../assets/images/gift_wrapping.svg'
