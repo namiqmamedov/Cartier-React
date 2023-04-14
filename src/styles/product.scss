@@ -1,0 +1,32 @@
+.product__top{
+    margin-top: 1px;
+    margin-bottom: 50px;
+    .thumbnail{
+        img{
+            width: 100%;
+        }
+    }
+    .text-main{
+        background-color: #F9F9F9;
+        .wrapper-card{
+            padding: 78px 30px;
+            h1{
+                padding-left: 81px;
+                padding-bottom: 10px;
+                font-size: 22px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: 'Montserrat',sans-serif;
+            }
+    
+            .description{
+                p{
+                    font-family: 'Montserrat',sans-serif;
+                    max-width: 525px;
+                    margin: 0 auto;  
+                    font-size: 15px; 
+                }
+            }
+        }
+    }
+}
