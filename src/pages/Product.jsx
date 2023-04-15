@@ -14,6 +14,9 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import {IoIosArrowDown} from 'react-icons/io'
+import ProductCard from '../components/UI/product-card/ProductCard';
+
 
 const label = {
     inputProps: {
@@ -31,13 +34,15 @@ const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} 
     }
 }));
 
-const AccordionSummary = styled((props) => (<MuiAccordionSummary expandIcon={'>'} {...props}/>))(({theme}) => ({
+const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary expandIcon={< IoIosArrowDown />} {...props}/>
+))(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark'
         ? 'rgba(255, 255, 255, .05)'
         : 'rgba(0, 0, 0, .03)',
     flexDirection: 'row-reverse',
     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-        transform: 'rotate(90deg)'
+        transform: 'rotate(180deg)'
     },
     '& .MuiAccordionSummary-content': {
         marginLeft: theme.spacing(1)
@@ -105,7 +110,7 @@ const Product = () => {
                 </button>
             </div>
             <div className="product-index">
-                <div className="product__filter col-lg-4">
+                <div className="product__filter col-lg-3">
                     <div className="filter__model">
                         SORT BY
                         <div className='filter-select'>
@@ -156,20 +161,140 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="filter__model">
-                        SELECTION FOR
+
                         <div className='filter-select'>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    <Typography>Collapsible Group Item #1</Typography>
+                                    SELECTION FOR
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
                                         <div className='filter-select'>
                                             <FormControl>
-                                                <FormControlLabel control={< Checkbox />} label="AVAILABLE ONLINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="NEW"/>
+                                                <FormControlLabel control={< Checkbox />} label="HER"/>
+                                                <FormControlLabel control={< Checkbox />} label="HIM"/>
                                             </FormControl>
-
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    CASE MATERIAL
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="ROSE GOLD"/>
+                                                <FormControlLabel control={< Checkbox />} label="YELLOW GOLD"/>
+                                                <FormControlLabel control={< Checkbox />} label="STEEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="GOLD AND STEEL"/>
+                                            </FormControl>
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    WATCH SHAPE
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="SQUARE"/>
+                                                <FormControlLabel control={< Checkbox />} label="RECTANGULAR"/>
+                                            </FormControl>
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    MOVEMENT
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="AUTOMATIC WINDING"/>
+                                                <FormControlLabel control={< Checkbox />} label="MANUAL WINDING"/>
+                                                <FormControlLabel control={< Checkbox />} label="QUARTZ"/>
+                                            </FormControl>
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    BRACELET / STRAP
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="LEATHER"/>
+                                                <FormControlLabel control={< Checkbox />} label="METAL"/>
+                                                <FormControlLabel control={< Checkbox />} label="INTERCHANGEABLE LEATHER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    CASE SIZE
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="LARGE MODEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="MEDIUM MODEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="SMALL MODEL"/>
+                                            </FormControl>
+                                        </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </div>
+                    </div>
+                    <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                    SUB-COLLECTION
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
                                         </div>
                                     </Typography>
                                 </AccordionDetails>
@@ -177,7 +302,9 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product__main col-lg-4"></div>
+                <div className="product__main col-lg-9">
+                    <ProductCard/>
+                </div>
             </div>
         </Row>
     </Container> </div>

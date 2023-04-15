@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Container, Row, Col} from 'reactstrap'
 import {NavLink, Link} from 'react-router-dom'
 import '../../styles/header.css'
@@ -28,13 +28,21 @@ import megaWatch02 from '../../assets/images/megaWatch02.webp'
 import megaWatch03 from '../../assets/images/megaWatch03.webp'
 import megaWatch04 from '../../assets/images/megaWatch04.webp'
 import megaWatch05 from '../../assets/images/megaWatch05.webp'
+import {MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane} from 'mdb-react-ui-kit';
 
 const Header = () => {
-    return ( 
-    <>
-    
-   
-    <header>
+
+    const [basicActive,
+        setBasicActive] = useState('tab1');
+
+    const handleBasicClick = (value) => {
+        if (value === basicActive) {
+            return;
+        }
+
+        setBasicActive(value);
+    };
+    return ( <> <header>
         <Container>
             <Row>
                 <nav className='nav-index'>
@@ -83,328 +91,201 @@ const Header = () => {
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">WATCHES AND WONDERS</a>
-                                    </li>
-                                    <li className='mega-menu-content'>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="menu-link menu-bar-link"
-                                            aria-haspopup="true">HIGH JEWELRY</a>
-                                        <ul>
-                                                <li className='mega-li'>
-                                                    <div className="mega-wrapper">
-                                                    <a href="#">LATEST COLLECTIONS</a>
-                                                    <ul>
-                                                        <li className='active'>
-                                                        <div className="tababa">
-                                                            <div className="tab-content">
-                                                                <img src={mega01} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega02} alt="" />
-                                                                <span>INDOMPTABLES DE CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega03} alt="" />
-                                                                <span>SIXIEME SENS PAR CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega04} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
-                                                    </div>
-                                                </li>
-                                                
-                                                <li className='mega-li'>
-                                                    <a href="#">MARKERS OF STYLE</a>
-                                                    <ul>
-                                                        <li className='mega-li'>
-                                                        <div className="mega-wrapper">
-                                                        <div className="tababa">
-                                                            <div className="tab-content">
-                                                                <img src={mega05} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega06} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega07} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega08} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li className='mega-li'>
-                                                    <a href="#">MARKERS OF STYLE</a>
-                                                    <ul>
-                                                        <li className='mega-li'>
-                                                           <div className="mega-wrapper">
-                                                           <div className="tababa">
-                                                           <div className="tab-content">
-                                                                <img src={mega09} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega10} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                           </div>
-                                                           </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                        </ul>
-                                    </li>
-                                    <li className='mega-menu-content'>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="menu-link menu-bar-link"
-                                            aria-haspopup="true">JEWELRY</a>
-                                        <ul>
-                                                <li >
-                                                    <a href="#">ALL COLLECTIONS</a>
-                                                    <ul>
-                                                        <li className='active'>
-                                                        <div className="tababa">
-    
-                                                            <div className="tab-content">
-                                                                <img src={mega11} alt="" />
-                                                                <span>INDOMPTABLES DE CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega12} alt="" />
-                                                                <span>SIXIEME SENS PAR CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega13} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega14} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega15} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega16} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                
-                                                <li>
-                                                    <a href="#">MARKERS OF STYLE</a>
-                                                    <ul>
-                                                        <li>
-                                                        <div className="tababa">
-
-                                                            <div className="tab-content">
-                                                                <img src={mega05} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega06} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega07} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={mega08} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">MARKERS OF STYLE</a>
-                                                    <ul>
-                                                        <li>
-                                                           <div className="tababa">
-                                                           <div className="tab-content">
-                                                                <img src={mega09} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                           </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                        </ul>
-                                    </li>
-                                    <li className='mega-menu-content'>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="menu-link menu-bar-link"
-                                            aria-haspopup="true">WATCHES</a>
-                                        <ul>
-                                                <li >
-                                                    <a href="#">ALL COLLECTIONS</a>
-                                                    <ul>
-                                                        <li className='active'>
-                                                        <div className="tababa">
-                                                            <div className="tab-content">
-                                                                <img src={megaWatch01} alt="" />
-                                                                <span>BEAUTES DU MONDE</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={megaWatch02} alt="" />
-                                                                <span>INDOMPTABLES DE CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={megaWatch03} alt="" />
-                                                                <span>SIXIEME SENS PAR CARTIER</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={megaWatch04} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                            <div className="tab-content">
-                                                                <img src={megaWatch05} alt="" />
-                                                                <span>CLASH UNLIMITED</span>
-                                                            </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="menu-link menu-bar-link"
-                                            aria-haspopup="true">ART OF LIVING</a>
-                                        <ul class="mega-menu mega-menu--flat">
+                                            aria-haspopup="true">1. Multilevel mega menu</a>
+                                        <ul class="mega-menu mega-menu--multiLevel">
                                             <li>
-                                                <a href="#" class="menu-link mega-menu-link mega-menu-header">3.1 Page link header</a>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.1 Flyout link</a>
                                                 <ul class="menu menu-list">
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.1 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a href="/page" class="menu-link menu-list-link">1.1.1 Page link</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            class="menu-link menu-list-link"
+                                                            aria-haspopup="true">1.1.2 Flyout link</a>
+                                                        <ul class="menu menu-list">
+                                                            <li>
+                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.1 Page link</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.2 Page link</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a href="/page" class="menu-link menu-list-link">1.1.3 Page link</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="mega-menu-content">
-                                                <p class="mega-menu-header">3.2 Page link header</p>
-                                                <p>This is just static content. You can add anything here. Images, text,
-                                                    buttons, your grandma's secrect recipe.</p>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.2 Flyout link</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.2.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.2.2 Page link</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.3 Flyout link</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.3.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.3.2 Page link</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/page" class="menu-link mega-menu-link">1.4 Page link</a>
                                             </li>
                                             <li class="mobile-menu-back-item">
                                                 <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
                                             </li>
                                         </ul>
                                     </li>
+
                                     <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">NEWS</a>
+                                            aria-haspopup="true">2. Flat mega menu (3 cols)</a>
                                         <ul class="mega-menu mega-menu--flat">
                                             <li>
-                                                <a href="#" class="menu-link mega-menu-link mega-menu-header">3.1 Page link header</a>
+                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.1 Page link header</a>
                                                 <ul class="menu menu-list">
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.1 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a href="/page" class="menu-link menu-list-link">2.1.1 Page link</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a href="/page" class="menu-link menu-list-link">2.1.2 Page link</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <a href="/page" class="menu-link menu-list-link">2.1.3 Page link</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="mega-menu-content">
-                                                <p class="mega-menu-header">3.2 Page link header</p>
-                                                <p>This is just static content. You can add anything here. Images, text,
-                                                    buttons, your grandma's secrect recipe.</p>
+                                            <li>
+                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.2 Page link header</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">2.2.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">2.2.2 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">2.2.3 Page link</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li class="mobile-menu-back-item">
                                                 <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
                                             </li>
                                         </ul>
                                     </li>
+
                                     <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">LA MAISON</a>
+                                            aria-haspopup="true">3. Flat mega menu (2 cols)</a>
                                         <ul class="mega-menu mega-menu--flat">
                                             <li>
-                                                <a href="#" class="menu-link mega-menu-link mega-menu-header">3.1 Page link header</a>
                                                 <ul class="menu menu-list">
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.1 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">
-                                                            3.1.2 Page link<br/>
-                                                            <small>Short decription of link</small>
-                                                        </a>
+                                                        <MDBTabs className='mb-3'>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab1')}
+                                                                    active={basicActive === 'tab1'}>
+                                                                    Tab 1
+
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab2')}
+                                                                    active={basicActive === 'tab2'}>
+                                                                    Tab 2
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab3')}
+                                                                    active={basicActive === 'tab3'}>
+                                                                    Tab 3
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                        </MDBTabs>
+
+                                                        <MDBTabsContent>
+                                                            <MDBTabsPane show={basicActive === 'tab1' }>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                        </MDBTabsContent>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li class="mega-menu-content">
-                                                <p class="mega-menu-header">3.2 Page link header</p>
-                                                <p>This is just static content. You can add anything here. Images, text,
-                                                    buttons, your grandma's secrect recipe.</p>
                                             </li>
                                             <li class="mobile-menu-back-item">
                                                 <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
                                             </li>
                                         </ul>
                                     </li>
+
+                                    <li>
+                                        <a href="/page" class="menu-link menu-bar-link">Static link</a>
+                                    </li>
+
                                     <li class="mobile-menu-header">
                                         <a href="/home" class="">
                                             <span>Home</span>
@@ -417,10 +298,7 @@ const Header = () => {
                 </nav>
             </Row>
         </Container>
-    </header> 
-
-
-    </>
+    </header> </>
        
 
        

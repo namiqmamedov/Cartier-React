@@ -9,6 +9,8 @@ import {
 } from 'reactstrap'
 import {Link} from 'react-router-dom'
 import '../../styles/footer.css'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import bottomImg from '../../assets/images/footer_tm.svg'
 import partner01 from '../../assets/images/footerPartner01.webp'
 import partner02 from '../../assets/images/footerPartner02.png'
@@ -22,6 +24,21 @@ import {FaPinterestP} from 'react-icons/fa';
 const Footer = () => {
     return (
         <footer>
+            <div className="footer-banner text-center">
+                <form action="#" method='post'>
+                    <div className="subscribe__main-index">
+                        <p className="subscribe__banner-title">
+                            Subscribe to our Newsletter
+                        </p>
+                        <TextField
+                            id="standard-basic"
+                            placeholder='your@email.com'
+                            label="Email"
+                            variant="standard"/>
+                        <Button variant="outlined">SUBSCRIBE</Button>
+                    </div>
+                </form>
+            </div>
             <Container>
                 <Row>
                     <div className="footer-index">
@@ -167,22 +184,22 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                     </Row>
+                </Row>
             </Container>
-                    <div className="footer-secondary">
-                        <Container>
-                            <Row>
-                                <div className="secondary-content">
-                                    <span>
-                                        SHOP IN: UNITED STATES
-                                    </span>
-                                    <span>
-                                        COPYRIGHT © 2023 CARTIER
-                                    </span>
-                                </div>
-                            </Row>
-                        </Container>
-                    </div>
+            <div className="footer-secondary">
+                <Container>
+                    <Row>
+                        <div className="secondary-content">
+                            <span>
+                                SHOP IN: UNITED STATES
+                            </span>
+                            <span>
+                                COPYRIGHT © 2023 CARTIER
+                            </span>
+                        </div>
+                    </Row>
+                </Container>
+            </div>
         </footer>
     )
 }

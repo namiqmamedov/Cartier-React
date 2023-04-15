@@ -59,15 +59,149 @@
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  display: flex;
 }
 .product__main-item .product-index .css-1hbvpl3-MuiSvgIcon-root {
   width: 19px;
+}
+.product__main-item .product-index .css-ta84vm-MuiAccordionDetails-root {
+  padding: 0;
 }
 .product__main-item .product-index .css-11zohuh-MuiSvgIcon-root {
   left: 0.75px;
   width: 17.6px;
 }
+.product__main-item .product-index .MuiAccordionSummary-content {
+  order: 1;
+  margin-left: 0;
+}
+.product__main-item .product-index #panel1d-header {
+  padding: 0;
+  background-color: transparent;
+}
+.product__main-item .product-index .MuiPaper-root {
+  border: none;
+}
+.product__main-item .product-index .MuiPaper-elevation {
+  width: 50%;
+}
+.product__main-item .product-index .MuiAccordionSummary-expandIconWrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .product__main-item .product-index span {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
+}
+
+.product__main {
+  display: flex;
+}
+.product__main a:hover {
+  color: inherit;
+}
+.product__main .card {
+  border: white;
+  width: 25%;
+  height: 29.5%;
+  cursor: pointer;
+  position: relative;
+  padding: 15px;
+  border-radius: 0px;
+  transition: 0.3s ease-in-out;
+}
+.product__main .card:hover {
+  border: 1px solid #e1d8d8 !important;
+  transition: none;
+  transform: none;
+}
+.product__main .card:hover .product__wishlist {
+  opacity: 1;
+}
+.product__main .card:hover .addToBag {
+  opacity: 1;
+}
+.product__main .card:hover .swiper-button-prev, .product__main .card:hover .swiper-button-next {
+  opacity: 1;
+}
+.product__main .card:hover .swiper-scrollbar-horizontal {
+  opacity: 1;
+}
+.product__main .card .swiper-button-disabled {
+  display: none;
+}
+.product__main .card .swiper-scrollbar {
+  background-color: transparent;
+}
+.product__main .card .swiper-scrollbar-horizontal {
+  opacity: 0;
+}
+.product__main .card .swiper-button-prev, .product__main .card .swiper-button-next {
+  opacity: 0;
+  background-color: white;
+  top: auto;
+  bottom: 19px;
+}
+.product__main .card .swiper-button-prev::after, .product__main .card .swiper-button-next::after {
+  height: 22px;
+  width: 19px;
+  background-color: transparent;
+}
+.product__main .card img {
+  border-radius: 0;
+}
+.product__main .card .card-body {
+  padding: 16px 3px;
+}
+.product__main .card .product__wishlist {
+  transition: 0.3s ease-in-out;
+  background-color: #fff;
+  display: flex;
+  font-size: 15px;
+  position: absolute;
+  padding: 0.5em;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  top: 25px;
+  right: 25px;
+  opacity: 0;
+  z-index: 111111111;
+}
+.product__main .card .card-title {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.025rem;
+}
+.product__main .card .card-text {
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+.product__main .card .card-price {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  letter-spacing: 0.095rem;
+  font-family: "Montserrat", sans-serif;
+}
+.product__main .card .addToBag {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  transition: 0.3s ease-in;
+  margin-bottom: -15px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.product__main .card .addToBag:hover {
+  color: black;
+  background-color: white;
 }/*# sourceMappingURL=product.css.map */
