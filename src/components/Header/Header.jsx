@@ -88,107 +88,82 @@ const Header = () => {
                                 <a href="javascript:void(0);" class="mobile-menu-trigger">Open mobile menu</a>
                                 <ul class="menu menu-bar">
                                     <li>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="menu-link menu-bar-link"
-                                            aria-haspopup="true">1. Multilevel mega menu</a>
-                                        <ul class="mega-menu mega-menu--multiLevel">
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">1.1 Flyout link</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.1.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="menu-link menu-list-link"
-                                                            aria-haspopup="true">1.1.2 Flyout link</a>
-                                                        <ul class="menu menu-list">
-                                                            <li>
-                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.1 Page link</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.2 Page link</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.1.3 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">1.2 Flyout link</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.2.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.2.2 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="javascript:void(0);"
-                                                    class="menu-link mega-menu-link"
-                                                    aria-haspopup="true">1.3 Flyout link</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.3.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">1.3.2 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link">1.4 Page link</a>
-                                            </li>
-                                            <li class="mobile-menu-back-item">
-                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
+                                        <a href="#" class="menu-link menu-bar-link">WATCHES AND WONDERS</a>
+                                    </li>             
                                     <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">2. Flat mega menu (3 cols)</a>
+                                            aria-haspopup="true">HIGH JEWELRY</a>
                                         <ul class="mega-menu mega-menu--flat">
                                             <li>
-                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.1 Page link header</a>
                                                 <ul class="menu menu-list">
                                                     <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.2 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.1.3 Page link</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/page" class="menu-link mega-menu-link mega-menu-header">2.2 Page link header</a>
-                                                <ul class="menu menu-list">
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.1 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.2 Page link</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/page" class="menu-link menu-list-link">2.2.3 Page link</a>
+                                                        <MDBTabs className='mb-3'>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab1')}
+                                                                    active={basicActive === 'tab1'}>
+                                                                    Tab 1
+
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab2')}
+                                                                    active={basicActive === 'tab2'}>
+                                                                    Tab 2
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab3')}
+                                                                    active={basicActive === 'tab3'}>
+                                                                    Tab 3
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                        </MDBTabs>
+                                                        <MDBTabsContent>
+                                                            <MDBTabsPane show={basicActive === 'tab1' }>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                        </MDBTabsContent>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -197,12 +172,11 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-
                                     <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">3. Flat mega menu (2 cols)</a>
+                                            aria-haspopup="true">JEWELRY</a>
                                         <ul class="mega-menu mega-menu--flat">
                                             <li>
                                                 <ul class="menu menu-list">
@@ -281,11 +255,325 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-
                                     <li>
-                                        <a href="/page" class="menu-link menu-bar-link">Static link</a>
-                                    </li>
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="menu-link menu-bar-link"
+                                            aria-haspopup="true">WATCHES</a>
+                                        <ul class="mega-menu mega-menu--flat">
+                                            <li>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <MDBTabs className='mb-3'>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab1')}
+                                                                    active={basicActive === 'tab1'}>
+                                                                    Tab 1
 
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab2')}
+                                                                    active={basicActive === 'tab2'}>
+                                                                    Tab 2
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab3')}
+                                                                    active={basicActive === 'tab3'}>
+                                                                    Tab 3
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                        </MDBTabs>
+
+                                                        <MDBTabsContent>
+                                                            <MDBTabsPane show={basicActive === 'tab1' }>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                        </MDBTabsContent>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mobile-menu-back-item">
+                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="menu-link menu-bar-link"
+                                            aria-haspopup="true">ART OF LIVING</a>
+                                        <ul class="mega-menu mega-menu--flat">
+                                            <li>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <MDBTabs className='mb-3'>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab1')}
+                                                                    active={basicActive === 'tab1'}>
+                                                                    Tab 1
+
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab2')}
+                                                                    active={basicActive === 'tab2'}>
+                                                                    Tab 2
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab3')}
+                                                                    active={basicActive === 'tab3'}>
+                                                                    Tab 3
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                        </MDBTabs>
+
+                                                        <MDBTabsContent>
+                                                            <MDBTabsPane show={basicActive === 'tab1' }>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                        </MDBTabsContent>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mobile-menu-back-item">
+                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="menu-link menu-bar-link"
+                                            aria-haspopup="true">NEWS</a>
+                                        <ul class="mega-menu mega-menu--flat">
+                                            <li>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <MDBTabs className='mb-3'>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab1')}
+                                                                    active={basicActive === 'tab1'}>
+                                                                    Tab 1
+
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab2')}
+                                                                    active={basicActive === 'tab2'}>
+                                                                    Tab 2
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                            <MDBTabsItem>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab3')}
+                                                                    active={basicActive === 'tab3'}>
+                                                                    Tab 3
+                                                                </MDBTabsLink>
+                                                            </MDBTabsItem>
+                                                        </MDBTabs>
+
+                                                        <MDBTabsContent>
+                                                            <MDBTabsPane show={basicActive === 'tab1' }>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega03} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                            <div className="mega-item">
+                                                                    <img src={mega01} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                    <div className="mega-item">
+                                                                    <img src={mega02} alt="" />
+                                                                    <h3>TANK</h3>
+                                                                    </div>
+                                                                </MDBTabsPane>
+                                                        </MDBTabsContent>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="mobile-menu-back-item">
+                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="menu-link menu-bar-link"
+                                            aria-haspopup="true">LA MAISON</a>
+                                        <ul class="mega-menu mega-menu--multiLevel">
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.1 Flyout link</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.1.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            class="menu-link menu-list-link"
+                                                            aria-haspopup="true">1.1.2 Flyout link</a>
+                                                        <ul class="menu menu-list">
+                                                            <li>
+                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.1 Page link</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/page" class="menu-link menu-list-link">1.1.2.2 Page link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.1.3 Page link</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.2 Flyout link</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.2.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.2.2 Page link</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="menu-link mega-menu-link"
+                                                    aria-haspopup="true">1.3 Flyout link</a>
+                                                <ul class="menu menu-list">
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.3.1 Page link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/page" class="menu-link menu-list-link">1.3.2 Page link</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/page" class="menu-link mega-menu-link">1.4 Page link</a>
+                                            </li>
+                                            <li class="mobile-menu-back-item">
+                                                <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
+                                            </li>
+                                        </ul>
+                                    </li>                            
                                     <li class="mobile-menu-header">
                                         <a href="/home" class="">
                                             <span>Home</span>
