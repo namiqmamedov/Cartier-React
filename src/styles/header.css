@@ -8,9 +8,25 @@ header .nav-index .nav-index-top {
   display: flex;
   justify-content: space-between;
 }
+header .nav-index .nav-item {
+  display: flex;
+}
 header .nav-index .nav-content-first {
   display: flex;
   gap: 1rem;
+}
+header .nav-index .nav-link {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  border: none;
+}
+header .nav-index .nav-link:hover {
+  color: black !important;
+  font-weight: bold;
+  border: none;
+  font-family: "Montserrat", sans-serif;
 }
 header .nav-index .logo-index {
   width: 23%;
@@ -64,15 +80,32 @@ header .nav-index .nav-direction {
   background: #ffffff;
   z-index: 10;
 }
+.nav-index .mega-menu .mega-item {
+  display: flex;
+  flex-direction: column;
+}
 .nav-index .mega-menu .mega-item img {
   width: 144px;
   height: 144px;
+}
+.nav-index .mega-menu .mega-item span {
+  display: block;
+  max-width: 144px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 13px;
 }
 .nav-index .mega-menu .tab-content > .active {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  border: none !important;
+  color: black !important;
 }
 .nav-index .mega-menu--multiLevel {
   flex-direction: column;

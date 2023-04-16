@@ -30,6 +30,74 @@ import megaWatch04 from '../../assets/images/megaWatch04.webp'
 import megaWatch05 from '../../assets/images/megaWatch05.webp'
 import {MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane} from 'mdb-react-ui-kit';
 
+const navLinks = [
+    {
+        display: 'HIGH JEWELRY',
+        title01: 'MARKERS OF STYLE',
+        title02: 'ICONIC PANTHERE',
+        title03: 'LIVING LEGACY',
+        title04: 'EXCEPTIONAL STONES',
+        title05: 'KNOW-HOW',
+        title06: 'DISCOVER IN BOUTIQUES',
+        img01: mega01,
+        img02: mega02,
+        img03: mega03,
+        img04: mega04,
+        img05: mega05,
+        img06: mega06,
+        img07: mega07,
+        img08: mega08,
+        img09: mega09,
+        img10: mega10,
+        img11: mega11,
+        img12: mega12,
+        // img13: mega12,
+        // img14: mega12,
+        // img15: mega12,
+        // img16: mega12,
+        // img17: mega12,
+        // img18: mega12,
+        // img19: mega12,
+        // img20: mega12,
+    },
+    {
+        display: 'JEWELRY',
+        title01: 'ALL COLLECTION',
+        title02: 'BRACELETS',
+        title03: 'RINGS',
+        title04: 'NECKLACES',
+        title05: 'EARRINGS',
+        title06: 'ENGAGEMENT RINGS',
+        title07: 'WEDDING BANDS',
+        
+    },
+    {
+        display: 'WATCHES',
+        title01: 'COLLECTIONS',
+        title02: 'CHOOSE YOUR WATCH',
+        title03: 'CARTIER WATCHMAKING',  
+    },
+    {
+        display: 'ART OF LIVING',
+        title01: 'BAGS',
+        title02: 'PERSONAL ACCESSORIES',
+        title03: 'HOME',
+        title04: 'WRITING & STATIONERY',
+        title05: 'EYEWEAR',
+        title06: 'FRAGRANCES',
+    },
+    {
+        display: 'NEWS',
+    },
+    {
+        display: 'LA MAISON',
+        title01: 'THE CULTURE OF DESIGN',
+        title02: 'THE STORY',
+        title03: 'SAVOIR-FAIRE & TRANSMISSION',
+        title04: 'CARTIERS COMMITMENTS',
+    },
+]
+
 const Header = () => {
 
     const [basicActive,
@@ -90,11 +158,12 @@ const Header = () => {
                                     <li>
                                         <a href="#" class="menu-link menu-bar-link">WATCHES AND WONDERS</a>
                                     </li>             
-                                    <li>
+                                    {navLinks.map((item,index) => (
+                                        <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
-                                            aria-haspopup="true">HIGH JEWELRY</a>
+                                            aria-haspopup="true">{item.display}</a>
                                         <ul class="mega-menu mega-menu--flat">
                                             <li>
                                                 <ul class="menu menu-list">
@@ -104,65 +173,98 @@ const Header = () => {
                                                                 <MDBTabsLink
                                                                     onMouseEnter={() => handleBasicClick('tab1')}
                                                                     active={basicActive === 'tab1'}>
-                                                                    Tab 1
-
+                                                                    {item.title01}
                                                                 </MDBTabsLink>
-                                                            </MDBTabsItem>
-                                                            <MDBTabsItem>
                                                                 <MDBTabsLink
                                                                     onMouseEnter={() => handleBasicClick('tab2')}
                                                                     active={basicActive === 'tab2'}>
-                                                                    Tab 2
+                                                                    {item.title02}
                                                                 </MDBTabsLink>
-                                                            </MDBTabsItem>
-                                                            <MDBTabsItem>
                                                                 <MDBTabsLink
                                                                     onMouseEnter={() => handleBasicClick('tab3')}
                                                                     active={basicActive === 'tab3'}>
-                                                                    Tab 3
+                                                                    {item.title03}
+                                                                </MDBTabsLink>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab4')}
+                                                                    active={basicActive === 'tab4'}>
+                                                                    {item.title04}
+                                                                </MDBTabsLink>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab5')}
+                                                                    active={basicActive === 'tab5'}>
+                                                                    {item.title05}
+                                                                </MDBTabsLink>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab6')}
+                                                                    active={basicActive === 'tab6'}>
+                                                                    {item.title06}
+                                                                </MDBTabsLink>
+                                                                <MDBTabsLink
+                                                                    onMouseEnter={() => handleBasicClick('tab7')}
+                                                                    active={basicActive === 'tab7'}>
+                                                                    {item.title07}
                                                                 </MDBTabsLink>
                                                             </MDBTabsItem>
                                                         </MDBTabs>
                                                         <MDBTabsContent>
                                                             <MDBTabsPane show={basicActive === 'tab1' }>
                                                             <div className="mega-item">
-                                                                    <img src={mega01} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                    <div className="mega-item">
-                                                                    <img src={mega02} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                    <div className="mega-item">
-                                                                    <img src={mega03} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                
-                                                                </MDBTabsPane>
-                                                            <MDBTabsPane show={basicActive === 'tab2'}>
+                                                                    <img src={item.img01} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
                                                             <div className="mega-item">
-                                                                    <img src={mega01} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                    <div className="mega-item">
-                                                                    <img src={mega02} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                    <div className="mega-item">
-                                                                    <img src={mega03} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                </MDBTabsPane>
-                                                            <MDBTabsPane show={basicActive === 'tab3'}>
+                                                                    <img src={item.img02} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
                                                             <div className="mega-item">
-                                                                    <img src={mega01} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                    <div className="mega-item">
-                                                                    <img src={mega02} alt="" />
-                                                                    <h3>TANK</h3>
-                                                                    </div>
-                                                                </MDBTabsPane>
+                                                                    <img src={item.img03} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img04} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                    
+                                                            </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab2' }>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img05} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img06} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img07} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img08} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            
+        
+                                                            </MDBTabsPane>
+                                                            <MDBTabsPane show={basicActive === 'tab3' }>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img09} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img10} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img11} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            <div className="mega-item">
+                                                                    <img src={item.img12} alt="" />
+                                                                    <span className='nav-title'>Beautes Du Monde</span>
+                                                            </div>
+                                                            </MDBTabsPane>
                                                         </MDBTabsContent>
                                                     </li>
                                                 </ul>
@@ -172,7 +274,8 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
+                                    ))}
+                                    {/* <li>
                                         <a
                                             href="javascript:void(0);"
                                             class="menu-link menu-bar-link"
@@ -573,7 +676,7 @@ const Header = () => {
                                                 <a href="javascript:void(0);" class="menu-link mobile-menu-back-link">Back</a>
                                             </li>
                                         </ul>
-                                    </li>                            
+                                    </li>                             */}
                                     <li class="mobile-menu-header">
                                         <a href="/home" class="">
                                             <span>Home</span>

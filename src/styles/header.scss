@@ -10,10 +10,31 @@ header {
             justify-content: space-between;
         }
 
+        .nav-item{
+            display: flex;
+        }
+
 
         .nav-content-first {
             display: flex;
             gap: 1rem;
+        }
+
+        .nav-link{
+            font-size: .85rem;
+            margin-bottom: 0;
+            font-family: 'Montserrat',sans-serif;
+            color: black;
+            border: none;
+
+
+            &:hover{
+                color: black !important;
+                font-weight: bold;
+                border: none;
+                font-family: 'Montserrat',sans-serif;
+
+            }
         }
 
         .logo-index {
@@ -82,17 +103,35 @@ header {
         z-index: 10;
 
         .mega-item {
+            display: flex;
+    flex-direction: column;
             img {
                 width: 144px;
                 height: 144px;
             }
+
+            span{
+                display: block;
+                max-width: 144px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: 'Montserrat',sans-serif;
+                margin-top: 13px;
+            }
         }
+
+       
 
         .tab-content>.active {
             width: 100%;
             display: flex;
             justify-content: center;
             gap: 1rem;
+            padding-bottom: 60px;
+            padding-top: 20px;
+            border: none !important;
+            color: black !important;
         }
 
     }
