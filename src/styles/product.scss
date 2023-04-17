@@ -69,7 +69,8 @@
         .filter-select {
             display: flex;
             align-items: center;
-            svg{
+
+            svg {
                 width: 21px;
                 opacity: .6;
             }
@@ -83,57 +84,59 @@
         font-weight: bold;
         display: flex;
 
-        .filter-model{
+        .filter-model {
             font-size: 14px;
             color: black;
             letter-spacing: 0.065rem;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .MuiButtonBase-root{
-            &:hover{
+        .MuiButtonBase-root {
+            &:hover {
                 background-color: transparent;
             }
         }
 
-        .accordion-button{
+        .accordion-button {
             font-size: 14px;
             color: black;
             font-weight: bold;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
             padding: 0;
             border: none;
             background-color: transparent;
             letter-spacing: 0.065rem;
-            padding-bottom: 4px;
-            &:focus{
+            padding-bottom: 15px;
+
+            &:focus {
                 box-shadow: none;
             }
 
-            
+
         }
 
-        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,{
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
             color: black;
         }
 
-        .accordion-button:not(.collapsed){
+        .accordion-button:not(.collapsed) {
             box-shadow: none;
-            &::after{
+
+            &::after {
                 background-size: cover;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
             }
         }
 
-        .accordion-body{
+        .accordion-body {
             padding: 0;
         }
 
-        .accordion{
+        .accordion {
             width: 61%;
         }
 
-        .accordion-item{
+        .accordion-item {
             border: none;
         }
 
@@ -176,7 +179,6 @@
         }
 
 
-
         span {
             font-size: 12px;
             font-family: 'Montserrat', sans-serif;
@@ -187,7 +189,7 @@
 .product__main {
 
     display: flex;
-    
+
     a {
         &:hover {
             color: inherit;
@@ -203,61 +205,66 @@
         padding: 15px;
         border-radius: 0px;
         transition: .3s ease-in-out;
-        
+
 
         &:hover {
             border: 1px solid #e1d8d8 !important;
             transition: none;
             transform: none;
 
-            .product__wishlist{
+            .product__wishlist {
                 opacity: 1;
             }
 
-            .addToBag{
+            .addToBag {
                 opacity: 1;
             }
-            .swiper-button-prev,.swiper-button-next{
+
+            .swiper-button-prev,
+            .swiper-button-next {
                 opacity: 1;
             }
-            .swiper-scrollbar-horizontal{
+
+            .swiper-scrollbar-horizontal {
                 opacity: 1;
             }
-    
+
         }
 
-        .swiper-button-disabled{
+        .swiper-button-disabled {
             display: none;
         }
 
-        .swiper-scrollbar{
+        .swiper-scrollbar {
             background-color: transparent;
         }
-      
-        .swiper-scrollbar-horizontal{
+
+        .swiper-scrollbar-horizontal {
             opacity: 0;
         }
 
-        .swiper-button-prev,.swiper-button-next{
+        .swiper-button-prev,
+        .swiper-button-next {
             opacity: 0;
             background-color: white;
 
-            &::after{
+            &::after {
                 height: 22px;
                 width: 19px;
                 background-color: transparent;
             }
+
             top: auto;
             bottom: 19px;
         }
 
-        
 
-        img{
+
+        img {
             border-radius: 0;
         }
 
-        .card-body{
+        .card-body {
             padding: 16px 3px;
         }
 
@@ -324,3 +331,211 @@
         }
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .product__top {
+        .product-content {
+            flex-direction: column;
+        }
+
+        .wrapper-card {
+            padding: 145px 18px !important;
+            padding-bottom: 35px !important;
+
+            h1 {
+                padding-left: 0 !important;
+            }
+        }
+
+        .thumbnail {
+            img {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 321px;
+                --focal-point-x: 50%;
+                --focal-point-y: 50%;
+            }
+        }
+    }
+
+    .product-wrapper{
+        justify-content: end !important;
+    }
+
+    .product-model{
+        padding-left: 0 !important;
+        margin-bottom: -26px;
+    }
+    .MuiPaper-elevation{
+        width: 100% !important;
+    }
+    .MuiBox-root{
+        width: 100%;
+        height: 450px;
+    }
+    .MuiDrawer-root{
+
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+    
+            .filter-model {
+                font-size: 14px;
+                color: black;
+                letter-spacing: 0.065rem;
+                font-family: 'Montserrat', sans-serif;
+            }
+    
+            .MuiButtonBase-root {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+    
+            .accordion-button {
+                font-size: 14px;
+                color: black;
+                font-weight: bold;
+                font-family: 'Montserrat', sans-serif;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                letter-spacing: 0.065rem;
+                padding-bottom: 15px;
+    
+                &:focus {
+                    box-shadow: none;
+                }
+    
+    
+            }
+    
+            .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+                color: black;
+            }
+    
+            .accordion-button:not(.collapsed) {
+                box-shadow: none;
+    
+                &::after {
+                    background-size: cover;
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                }
+            }
+    
+            .accordion-body {
+                padding: 0;
+            }
+    
+            .accordion {
+                width: 100%;
+            }
+    
+            .accordion-item {
+                border: none;
+            }
+    
+            .css-1hbvpl3-MuiSvgIcon-root {
+                width: 19px;
+            }
+    
+            .css-ta84vm-MuiAccordionDetails-root {
+                padding: 0;
+            }
+    
+            .css-11zohuh-MuiSvgIcon-root {
+                left: 0.75px;
+                width: 17.6px;
+            }
+    
+            .MuiAccordionSummary-content {
+                order: 1;
+                margin-left: 0;
+            }
+    
+            #panel1d-header {
+                padding: 0;
+                background-color: transparent;
+            }
+    
+            .MuiPaper-root {
+                border: none;
+            }
+    
+            .MuiPaper-elevation {
+                width: 50%;
+            }
+    
+            .MuiAccordionSummary-expandIconWrapper {
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+    
+    
+            span {
+                font-size: 12px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+        .filter__model{
+            text-align: left;
+            
+        }
+
+        strong{
+            letter-spacing: .04rem;
+            font-size: 14px;
+            font-family: 'Montserrat',sans-serif;
+        }
+    }
+
+    .product__main-item{
+        .product__first-element{
+            flex-direction: column;
+        }
+
+        .product__filter{
+            display: none;
+        }
+        .product-index{
+            flex-direction: column;
+
+
+            .product__main{
+                flex-wrap: wrap;
+
+                .prodcut-model{
+                    padding-left: 14px;
+                }
+                .card{
+                    width: 50%;
+
+                    &:hover{
+                        border: none;
+                    }
+
+                    .product__wishlist{
+                        opacity: 1;
+                    }
+
+                    .addToBag{
+                        opacity: 1;
+                    }
+                    .swiper-scrollbar-horizontal{
+                        opacity: 1;
+                    }
+
+                    .swiper-button-prev{
+                        display: none;
+                    }
+                    .swiper-button-next{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }

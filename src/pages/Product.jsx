@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import mainModule03 from '../assets/images/mainModule03.webp'
 import {Container, Row, Col} from 'reactstrap'
 import '../styles/product.css'
@@ -10,10 +10,10 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import {styled} from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import {IoIosArrowDown} from 'react-icons/io'
 import ProductCard from '../components/UI/product-card/ProductCard';
 import Accordion from 'react-bootstrap/Accordion';
+import {Drawer, Box, Typography, IconButton} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
 
 const label = {
     inputProps: {
@@ -22,13 +22,15 @@ const label = {
 };
 
 const Product = () => {
+    const [isDrawerOpen,
+        setIsDrawerOpen] = useState(false)
 
     return ( <> <div className="product__top">
         <div className="product-content d-flex">
-            <Col lg='6' className="thumbnail">
+            <Col lg='6' xs='12' className="thumbnail">
                 <img src={mainModule03} alt="Product Content Image"/>
             </Col>
-            <Col lg='6' className="text-main">
+            <Col lg='6' xs='12' className="text-main">
                 <div className="wrapper-card">
                     <h1>TANK</h1>
                     <div className='description'>
@@ -53,6 +55,116 @@ const Product = () => {
                     </Breadcrumb.Item>
                     <Breadcrumb.Item>TANK</Breadcrumb.Item>
                 </Breadcrumb>
+
+                <IconButton size='large' onClick={() => setIsDrawerOpen(true)}>
+                    <button>
+                        FILTER BY
+                    </button>
+                </IconButton>
+                <Drawer
+                    anchor='bottom'
+                    open={isDrawerOpen}
+                    onClose={() => setIsDrawerOpen(false)}>
+                    <Box textAlign='left'>
+                        <Typography variant='h6' component='div'>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        </Typography>
+                    </Box>
+                </Drawer>
                 <div className="product-model">
                     <div className="product-count">
                         <span>52 Models</span>
@@ -134,17 +246,17 @@ const Product = () => {
                                         </div>
                                     </Accordion.Body>
                                 </Accordion.Item>
-                            </Accordion>          
+                            </Accordion>
                         </div>
                     </div>
-                     <div className="filter__model">
+                    <div className="filter__model">
                         <div className='filter-select'>
-                             <Accordion defaultActiveKey={['0']} alwaysOpen>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>CASE MATERIAL</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="ROSE GOLD"/>
                                                 <FormControlLabel control={< Checkbox />} label="YELLOW GOLD"/>
                                                 <FormControlLabel control={< Checkbox />} label="STEEL"/>
@@ -163,7 +275,7 @@ const Product = () => {
                                     <Accordion.Header>WATCH SHAPE</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="SQUARE"/>
                                                 <FormControlLabel control={< Checkbox />} label="RECTANGULAR"/>
                                             </FormControl>
@@ -180,7 +292,7 @@ const Product = () => {
                                     <Accordion.Header>CASE MATERIAL</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="AUTOMATIC WINDING"/>
                                                 <FormControlLabel control={< Checkbox />} label="MANUAL WINDING"/>
                                                 <FormControlLabel control={< Checkbox />} label="QUARTZ"/>
@@ -195,14 +307,15 @@ const Product = () => {
                         <div className='filter-select'>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header> BRACELET / STRAP</Accordion.Header>
+                                    <Accordion.Header>
+                                        BRACELET / STRAP</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="LEATHER"/>
                                                 <FormControlLabel control={< Checkbox />} label="METAL"/>
                                                 <FormControlLabel control={< Checkbox />} label="INTERCHANGEABLE LEATHER"/>
-                                        </FormControl>
+                                            </FormControl>
                                         </div>
                                     </Accordion.Body>
                                 </Accordion.Item>
@@ -216,7 +329,7 @@ const Product = () => {
                                     <Accordion.Header>CASE SIZE</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="LARGE MODEL"/>
                                                 <FormControlLabel control={< Checkbox />} label="MEDIUM MODEL"/>
                                                 <FormControlLabel control={< Checkbox />} label="SMALL MODEL"/>
@@ -234,7 +347,7 @@ const Product = () => {
                                     <Accordion.Header>SUB-COLLECTION</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
-                                        <FormControl>
+                                            <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
                                                 <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
                                                 <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
@@ -245,7 +358,7 @@ const Product = () => {
                                 </Accordion.Item>
                             </Accordion>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div className="product__main col-lg-9">
                     <ProductCard/>

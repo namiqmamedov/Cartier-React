@@ -84,11 +84,12 @@ const ProductCard = () => {
                             navigation
                             speed={700}
                             pagination={{
-                            clickable: true
+                            clickable: true                     
                         }}
                             scrollbar={{
                             draggable: true
-                        }}>
+                        }}
+                        >
                             <SwiperSlide>
                                 <Card.Img variant="top" src={item.slider01}/>
                             </SwiperSlide>
