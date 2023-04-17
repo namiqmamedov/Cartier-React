@@ -10,13 +10,10 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import {styled} from '@mui/material/styles';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import {IoIosArrowDown} from 'react-icons/io'
 import ProductCard from '../components/UI/product-card/ProductCard';
-
+import Accordion from 'react-bootstrap/Accordion';
 
 const label = {
     inputProps: {
@@ -24,45 +21,7 @@ const label = {
     }
 };
 
-const Accordion = styled((props) => (<MuiAccordion disableGutters elevation={0} square {...props}/>))(({theme}) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-        borderBottom: 0
-    },
-    '&:before': {
-        display: 'none'
-    }
-}));
-
-const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary expandIcon={< IoIosArrowDown />} {...props}/>
-))(({theme}) => ({
-    backgroundColor: theme.palette.mode === 'dark'
-        ? 'rgba(255, 255, 255, .05)'
-        : 'rgba(0, 0, 0, .03)',
-    flexDirection: 'row-reverse',
-    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-        transform: 'rotate(180deg)'
-    },
-    '& .MuiAccordionSummary-content': {
-        marginLeft: theme.spacing(1)
-    }
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)'
-}));
-
 const Product = () => {
-    const [expanded,
-        setExpanded] = React.useState('panel1');
-
-    const handleChange = (panel) => (event, newExpanded) => {
-        setExpanded(newExpanded
-            ? panel
-            : false);
-    };
 
     return ( <> <div className="product__top">
         <div className="product-content d-flex">
@@ -163,144 +122,130 @@ const Product = () => {
                     <div className="filter__model">
 
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    SELECTION FOR
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SELECTION FOR</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="HER"/>
                                                 <FormControlLabel control={< Checkbox />} label="HIM"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>          
                         </div>
                     </div>
-                    <div className="filter__model">
+                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    CASE MATERIAL
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                             <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>CASE MATERIAL</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="ROSE GOLD"/>
                                                 <FormControlLabel control={< Checkbox />} label="YELLOW GOLD"/>
                                                 <FormControlLabel control={< Checkbox />} label="STEEL"/>
                                                 <FormControlLabel control={< Checkbox />} label="GOLD AND STEEL"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    WATCH SHAPE
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>WATCH SHAPE</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="SQUARE"/>
                                                 <FormControlLabel control={< Checkbox />} label="RECTANGULAR"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    MOVEMENT
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>CASE MATERIAL</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="AUTOMATIC WINDING"/>
                                                 <FormControlLabel control={< Checkbox />} label="MANUAL WINDING"/>
                                                 <FormControlLabel control={< Checkbox />} label="QUARTZ"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    BRACELET / STRAP
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header> BRACELET / STRAP</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="LEATHER"/>
                                                 <FormControlLabel control={< Checkbox />} label="METAL"/>
                                                 <FormControlLabel control={< Checkbox />} label="INTERCHANGEABLE LEATHER"/>
-                                            </FormControl>
+                                        </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    CASE SIZE
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>CASE SIZE</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="LARGE MODEL"/>
                                                 <FormControlLabel control={< Checkbox />} label="MEDIUM MODEL"/>
                                                 <FormControlLabel control={< Checkbox />} label="SMALL MODEL"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
                     </div>
                     <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                    SUB-COLLECTION
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Body>
                                         <div className='filter-select'>
-                                            <FormControl>
+                                        <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
                                                 <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
                                                 <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
                                                 <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
                                             </FormControl>
                                         </div>
-                                    </Typography>
-                                </AccordionDetails>
+                                    </Accordion.Body>
+                                </Accordion.Item>
                             </Accordion>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <div className="product__main col-lg-9">
                     <ProductCard/>

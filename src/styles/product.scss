@@ -69,6 +69,10 @@
         .filter-select {
             display: flex;
             align-items: center;
+            svg{
+                width: 21px;
+                opacity: .6;
+            }
         }
     }
 
@@ -78,6 +82,60 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         display: flex;
+
+        .filter-model{
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat',sans-serif;
+        }
+
+        .MuiButtonBase-root{
+            &:hover{
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button{
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+            font-family: 'Montserrat',sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 4px;
+            &:focus{
+                box-shadow: none;
+            }
+
+            
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,{
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed){
+            box-shadow: none;
+            &::after{
+                background-size: cover;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body{
+            padding: 0;
+        }
+
+        .accordion{
+            width: 61%;
+        }
+
+        .accordion-item{
+            border: none;
+        }
 
         .css-1hbvpl3-MuiSvgIcon-root {
             width: 19px;
