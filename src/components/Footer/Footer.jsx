@@ -20,6 +20,7 @@ import {ImFacebook} from 'react-icons/im';
 import {BsTwitter} from 'react-icons/bs';
 import {TfiYoutube} from 'react-icons/tfi';
 import {FaPinterestP} from 'react-icons/fa';
+import Accordion from 'react-bootstrap/Accordion';
 
 const Footer = () => {
     return (
@@ -136,6 +137,111 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen flush>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header className="router-title">CUSTOMER CARE</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className="router-index">
+                                            <div className="router-item">
+                                                <ul>
+                                                    <li>
+                                                        <Link>
+                                                            CONTACT US
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link>
+                                                            CALL NOW: 800 227 8437
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link>
+                                                            FAQ
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link>
+                                                            CHECK ORDER
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link>
+                                                            BOOK AN APPOINTMENT
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header className="router-title">OUR COMPANY</Accordion.Header>
+                                    <Accordion.Body>
+                                    <div className="router-index">
+                                    <div className="router-item">
+                                        <ul>
+                                            <li>
+                                                <Link>
+                                                    FIND A BOUTIQUE
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    CAREERS
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    CARTIER AND CORPORATE SOCIAL RESPONSIBILITY
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header className="router-title">LEGAL AREA</Accordion.Header>
+                                    <Accordion.Body>
+                                    <div className="router-index">
+                                    <div className="router-item">
+                                        <ul>
+                                            <li>
+                                                <Link>
+                                                    TERMS OF USE
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    PRIVACY POLICY
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    CONDITIONS OF SALE
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    CONDITIONS OF SALE PAY-BY-LINK
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    CREDITS
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link>
+                                                    ACCESSIBILITY STATEMENT
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
                             <div className="social-link">
                                 <h2 className='router-title'>FOLLOW US</h2>
                                 <ul>

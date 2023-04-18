@@ -1,7 +1,7 @@
 header {
     -webkit-box-shadow: 0 0.0625rem 0 0 rgba(0, 0, 0, .15);
     box-shadow: 0 0.0625rem 0 0 rgba(0, 0, 0, .15);
-
+    overflow-x: hidden;
     .nav-index {
         padding-top: 1.5rem;
 
@@ -52,7 +52,6 @@ header {
         }
     }
 }
-
 
 .nav-index {
 
@@ -139,7 +138,7 @@ header {
         flex-direction: column;
     }
 
-    @media all and (min-width: 992px) {
+    @media all and (min-width: 768px) {
         .nav {
             background: #ffffff;
             justify-content: center;
@@ -255,7 +254,7 @@ header {
         }
     }
 
-    @media all and (max-width: 950px) {
+    @media all and (max-width: 768px) {
         .nav {
             padding: 20px;
         }
@@ -420,7 +419,7 @@ header {
         }
     }
 
-    @media all and (max-width: 950px) and (hover: none) {
+    @media all and (max-width: 768px) and (hover: none) {
         .mobile-menu-trigger:hover~ul {
             left: 0;
         }

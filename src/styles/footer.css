@@ -90,13 +90,36 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.accordion {
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
   .footer-index .footer-main {
     flex-direction: column;
+    padding: 0;
   }
   .footer-index .router-wrapper {
-    width: 100%;
-    flex-direction: column;
+    display: none !important;
+  }
+  .footer-index .accordion {
+    display: block;
+  }
+  .footer-index .accordion .accordion-item {
+    border: none;
+    padding-bottom: 10px;
+  }
+  .footer-index .accordion .accordion-button {
+    padding: 0;
+  }
+  .footer-index .accordion button {
+    background-color: transparent;
+  }
+  .footer-index .accordion button:focus {
+    box-shadow: none;
+  }
+  .footer-index .accordion .accordion-button:not(.collapsed) {
+    box-shadow: none;
   }
   .footer-index .social-link {
     width: 100% !important;

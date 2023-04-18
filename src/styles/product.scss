@@ -75,6 +75,10 @@
                 opacity: .6;
             }
         }
+
+        .filter__model{
+            margin: 0;
+        }
     }
 
     .product-index {
@@ -106,7 +110,7 @@
             border: none;
             background-color: transparent;
             letter-spacing: 0.065rem;
-            padding-bottom: 15px;
+            padding-bottom: 4px;
 
             &:focus {
                 box-shadow: none;
@@ -186,9 +190,14 @@
     }
 }
 
-.product__main {
+.filter-app{
+    display: none;
+}
 
+.product__main {
+    flex-wrap: wrap;
     display: flex;
+
 
     a {
         &:hover {
@@ -285,7 +294,7 @@
             top: 25px;
             right: 25px;
             opacity: 0;
-            z-index: 111111111;
+            z-index: 11;
         }
 
         .card-title {
@@ -359,183 +368,1173 @@
         }
     }
 
-    .product-wrapper{
+    .product__main-item {
+        .product__first-element {
+            flex-direction: column;
+        }
+    
+        .product__filter {
+            display: none;
+        }
+    
+        .product-index {
+            flex-direction: column;
+    
+    
+            .product__main {
+                flex-wrap: wrap;
+    
+                .prodcut-model {
+                    padding-left: 14px;
+                }
+    
+                .card {
+                    width: 50%;
+                    height: 21%;
+    
+                    &:hover {
+                        border: none;
+                    }
+    
+                    .product__wishlist {
+                        opacity: 1;
+                    }
+    
+                    .addToBag {
+                        opacity: 1;
+                    }
+    
+                    .swiper-scrollbar-horizontal {
+                        opacity: 1;
+                    }
+    
+                    .swiper-button-prev {
+                        display: none;
+                    }
+    
+                    .swiper-button-next {
+                        display: none;
+                    }
+                }
+            }
+    
+        }
+    }
+    
+    .product-wrapper {
         justify-content: end !important;
     }
 
-    .product-model{
+    .product-model {
         padding-left: 0 !important;
         margin-bottom: -26px;
     }
-    .MuiPaper-elevation{
+
+    .MuiPaper-elevation {
         width: 100% !important;
     }
-    .MuiBox-root{
+
+    .MuiBox-root {
         width: 100%;
-        height: 450px;
+        height: 468px;
     }
-    .MuiDrawer-root{
 
-            font-size: 14px;
+    .filter-app {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-bottom: 18px;
+
+        button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
             font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-    
-            .filter-model {
-                font-size: 14px;
-                color: black;
-                letter-spacing: 0.065rem;
-                font-family: 'Montserrat', sans-serif;
-            }
-    
-            .MuiButtonBase-root {
-                &:hover {
-                    background-color: transparent;
-                }
-            }
-    
-            .accordion-button {
-                font-size: 14px;
-                color: black;
-                font-weight: bold;
-                font-family: 'Montserrat', sans-serif;
-                padding: 0;
-                border: none;
-                background-color: transparent;
-                letter-spacing: 0.065rem;
-                padding-bottom: 15px;
-    
-                &:focus {
-                    box-shadow: none;
-                }
-    
-    
-            }
-    
-            .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
-                color: black;
-            }
-    
-            .accordion-button:not(.collapsed) {
-                box-shadow: none;
-    
-                &::after {
-                    background-size: cover;
-                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-                }
-            }
-    
-            .accordion-body {
-                padding: 0;
-            }
-    
-            .accordion {
-                width: 100%;
-            }
-    
-            .accordion-item {
-                border: none;
-            }
-    
-            .css-1hbvpl3-MuiSvgIcon-root {
-                width: 19px;
-            }
-    
-            .css-ta84vm-MuiAccordionDetails-root {
-                padding: 0;
-            }
-    
-            .css-11zohuh-MuiSvgIcon-root {
-                left: 0.75px;
-                width: 17.6px;
-            }
-    
-            .MuiAccordionSummary-content {
-                order: 1;
-                margin-left: 0;
-            }
-    
-            #panel1d-header {
-                padding: 0;
-                background-color: transparent;
-            }
-    
-            .MuiPaper-root {
-                border: none;
-            }
-    
-            .MuiPaper-elevation {
-                width: 50%;
-            }
-    
-            .MuiAccordionSummary-expandIconWrapper {
-                svg {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                }
-            }
-    
-    
-            span {
-                font-size: 12px;
-                font-family: 'Montserrat', sans-serif;
-            }
         }
-        .filter__model{
-            text-align: left;
-            
+    }
+
+    .MuiDrawer-root {
+
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
         }
 
-        strong{
+        strong {
             letter-spacing: .04rem;
             font-size: 14px;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-model {
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .MuiSvgIcon-root {
+            width: 0.8em;
+        }
+
+        .MuiButtonBase-root {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            color: black !important;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 15px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+
+            &::after {
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            padding-left: 12px;
+            padding-top: 22px;
+        }
+
+        .css-1hbvpl3-MuiSvgIcon-root {
+            width: 19px;
+        }
+
+        .css-ta84vm-MuiAccordionDetails-root {
+            padding: 0;
+        }
+
+        .css-11zohuh-MuiSvgIcon-root {
+            left: 0.75px;
+            width: 17.6px;
+        }
+
+        .MuiAccordionSummary-content {
+            order: 1;
+            margin-left: 0;
+        }
+
+        #panel1d-header {
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .MuiPaper-root {
+            border: none;
+        }
+
+        .MuiPaper-elevation {
+            width: 50%;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+
+        span {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
         }
     }
 
-    .product__main-item{
-        .product__first-element{
+    .filter__model {
+        text-align: left;
+
+    }
+
+
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 750px !important;
+    }
+
+    .product__top {
+        margin-bottom: 14px;
+        .product-content {
             flex-direction: column;
         }
 
-        .product__filter{
+        .wrapper-card {
+            padding: 22px 18px !important;
+            padding-bottom: 0;
+           
+
+            h1 {
+                padding-left: 0 !important;
+            }
+
+            p{
+                margin: 0 !important;
+            }
+        }
+
+        .thumbnail {
+            img {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 321px;
+                --focal-point-x: 50%;
+                --focal-point-y: 50%;
+            }
+        }
+    }
+
+    .product__main-item {
+        .product__first-element {
+            flex-direction: column;
+        }
+    
+        .product__filter {
             display: none;
         }
-        .product-index{
+    
+        .product-index {
             flex-direction: column;
-
-
-            .product__main{
+    
+    
+            .product__main {
                 flex-wrap: wrap;
-
-                .prodcut-model{
+    
+                .prodcut-model {
                     padding-left: 14px;
                 }
-                .card{
+    
+                .card {
                     width: 50%;
-
-                    &:hover{
+    
+                    &:hover {
                         border: none;
                     }
-
-                    .product__wishlist{
+    
+                    .product__wishlist {
                         opacity: 1;
                     }
-
-                    .addToBag{
+    
+                    .addToBag {
                         opacity: 1;
                     }
-                    .swiper-scrollbar-horizontal{
+    
+                    .swiper-scrollbar-horizontal {
                         opacity: 1;
                     }
-
-                    .swiper-button-prev{
+    
+                    .swiper-button-prev {
                         display: none;
                     }
-                    .swiper-button-next{
+    
+                    .swiper-button-next {
                         display: none;
                     }
                 }
             }
-            
+    
         }
     }
+
+    .product-wrapper {
+        justify-content: end !important;
+    }
+
+    .product-model {
+        padding-left: 0 !important;
+        margin-bottom: -26px;
+    }
+
+    .MuiPaper-elevation {
+        width: 100% !important;
+    }
+
+    .MuiBox-root {
+        width: 100%;
+        height: 468px;
+    }
+
+    .filter-app {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-bottom: 18px;
+
+        button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .MuiDrawer-root {
+
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
+        }
+
+        strong {
+            letter-spacing: .04rem;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-model {
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .MuiSvgIcon-root {
+            width: 0.8em;
+        }
+
+        .MuiButtonBase-root {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            color: black !important;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 15px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+
+            &::after {
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            padding-left: 12px;
+            padding-top: 22px;
+        }
+
+        .css-1hbvpl3-MuiSvgIcon-root {
+            width: 19px;
+        }
+
+        .css-ta84vm-MuiAccordionDetails-root {
+            padding: 0;
+        }
+
+        .css-11zohuh-MuiSvgIcon-root {
+            left: 0.75px;
+            width: 17.6px;
+        }
+
+        .MuiAccordionSummary-content {
+            order: 1;
+            margin-left: 0;
+        }
+
+        #panel1d-header {
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .MuiPaper-root {
+            border: none;
+        }
+
+        .MuiPaper-elevation {
+            width: 50%;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+
+        span {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .filter__model {
+        text-align: left;
+
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+        max-width: 970px !important;
+    }
+
+    .product__top {
+        margin-bottom: 14px;
+
+        .wrapper-card {
+            padding: 22px 32px !important;
+            padding-bottom: 0;
+           
+
+            h1 {
+                padding-left: 0 !important;
+            }
+
+            p{
+                margin: 0 !important;
+            }
+        }
+
+        .thumbnail {
+            img {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 210px;
+                --focal-point-x: 50%;
+                --focal-point-y: 50%;
+            }
+        }
+    }
+
+    .product__main-item {
+        .card{
+            padding: 11px;
+        }
+
+        .accordion{
+            width: 90% !important;
+        }
+        .filter-app{
+            display: none;
+        }
+    
+        .product-index {
+            .product__main {
+                flex-wrap: wrap;
+    
+                .prodcut-model {
+                    padding-left: 14px;
+                }
+    
+                .card {
+                    width: 33%;
+    
+                }
+            }
+    
+        }
+    }
+
+    .product-wrapper {
+        justify-content: end !important;
+    }
+
+    .breadcrumb{
+        max-width: 215px;
+    }
+
+    .product-model {
+        margin-bottom: -26px;
+    }
+
+    .MuiPaper-elevation {
+        width: 100% !important;
+    }
+
+    .MuiBox-root {
+        width: 100%;
+        height: 468px;
+    }
+
+    .filter-app {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-bottom: 18px;
+
+        button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .MuiDrawer-root {
+
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
+        }
+
+        strong {
+            letter-spacing: .04rem;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-model {
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .MuiSvgIcon-root {
+            width: 0.8em;
+        }
+
+        .MuiButtonBase-root {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            color: black !important;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 15px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+
+            &::after {
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            padding-left: 12px;
+            padding-top: 22px;
+        }
+
+        .css-1hbvpl3-MuiSvgIcon-root {
+            width: 19px;
+        }
+
+        .css-ta84vm-MuiAccordionDetails-root {
+            padding: 0;
+        }
+
+        .css-11zohuh-MuiSvgIcon-root {
+            left: 0.75px;
+            width: 17.6px;
+        }
+
+        .MuiAccordionSummary-content {
+            order: 1;
+            margin-left: 0;
+        }
+
+        #panel1d-header {
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .MuiPaper-root {
+            border: none;
+        }
+
+        .MuiPaper-elevation {
+            width: 50%;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+
+        span {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .filter__model {
+        text-align: left;
+
+    }
+
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        max-width: 1150px !important;
+    }
+    .product__first-element{
+        align-items: center;
+    }
+
+    .product__top {
+        margin-bottom: 14px;
+
+        .wrapper-card {
+            padding: 22px 32px !important;
+            padding-bottom: 0;
+           
+
+            h1 {
+                padding-left: 0 !important;
+            }
+
+            p{
+                margin: 0 !important;
+            }
+        }
+
+        .thumbnail {
+            img {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 210px;
+                --focal-point-x: 50%;
+                --focal-point-y: 50%;
+            }
+        }
+    }
+
+    .product__main-item {
+        .card{
+            padding: 11px;
+        }
+
+        .accordion{
+            width: 90% !important;
+        }
+        .filter-app{
+            display: none;
+        }
+
+            
+        .product-model {
+            padding-left: 48px !important;
+        }
+    
+        .product-index {
+            .product__main {
+                flex-wrap: wrap;
+    
+                .card {
+                    width: 33%;
+    
+                }
+            }
+    
+        }
+    }
+
+    .product-wrapper {
+        justify-content: end !important;
+    }
+
+    .breadcrumb{
+        max-width: 240px;
+    }
+
+    .MuiPaper-elevation {
+        width: 100% !important;
+    }
+
+    .MuiBox-root {
+        width: 100%;
+        height: 468px;
+    }
+
+    .filter-app {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-bottom: 18px;
+
+        button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .MuiDrawer-root {
+
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
+        }
+
+        strong {
+            letter-spacing: .04rem;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-model {
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .MuiSvgIcon-root {
+            width: 0.8em;
+        }
+
+        .MuiButtonBase-root {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            color: black !important;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 15px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+
+            &::after {
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            padding-left: 12px;
+            padding-top: 22px;
+        }
+
+        .css-1hbvpl3-MuiSvgIcon-root {
+            width: 19px;
+        }
+
+        .css-ta84vm-MuiAccordionDetails-root {
+            padding: 0;
+        }
+
+        .css-11zohuh-MuiSvgIcon-root {
+            left: 0.75px;
+            width: 17.6px;
+        }
+
+        .MuiAccordionSummary-content {
+            order: 1;
+            margin-left: 0;
+        }
+
+        #panel1d-header {
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .MuiPaper-root {
+            border: none;
+        }
+
+        .MuiPaper-elevation {
+            width: 50%;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+
+        span {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .filter__model {
+        text-align: left;
+        padding-bottom: 6px;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1350px !important;
+    }
+    .product__first-element{
+        align-items: center;
+    }
+
+    .product__top {
+        margin-bottom: 14px;
+
+        .wrapper-card {
+            padding: 62px 131px !important;
+            padding-bottom: 0;
+           
+
+            h1 {
+                padding-left: 0 !important;
+            }
+
+            p{
+                margin: 0 !important;
+            }
+        }
+
+        .thumbnail {
+            img {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 275px;
+                --focal-point-x: 50%;
+                --focal-point-y: 50%;
+            }
+        }
+    }
+
+    .product__main-item {
+        .card{
+            padding: 11px;
+        }
+
+        .accordion{
+            width: 90% !important;
+        }
+        .filter-app{
+            display: none;
+        }
+
+            
+        .product-model {
+            padding-left: 48px !important;
+        }
+    
+        .product-index {
+            .product__main {
+                flex-wrap: wrap;
+    
+                .card {
+                    width: 25%;
+                }
+            }
+    
+        }
+    }
+
+    .product-wrapper {
+        justify-content: end !important;
+    }
+
+    .breadcrumb{
+        max-width: 290px;
+    }
+
+    .MuiPaper-elevation {
+        width: 100% !important;
+    }
+
+    .MuiBox-root {
+        width: 100%;
+        height: 468px;
+    }
+
+    .filter-app {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-bottom: 18px;
+
+        button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .MuiDrawer-root {
+
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
+        }
+
+        strong {
+            letter-spacing: .04rem;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .filter-model {
+            font-size: 14px;
+            color: black;
+            letter-spacing: 0.065rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .MuiSvgIcon-root {
+            width: 0.8em;
+        }
+
+        .MuiButtonBase-root {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            color: black !important;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            letter-spacing: 0.065rem;
+            padding-bottom: 15px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+        }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+            color: black;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none;
+
+            &::after {
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            padding-left: 12px;
+            padding-top: 22px;
+        }
+
+        .css-1hbvpl3-MuiSvgIcon-root {
+            width: 19px;
+        }
+
+        .css-ta84vm-MuiAccordionDetails-root {
+            padding: 0;
+        }
+
+        .css-11zohuh-MuiSvgIcon-root {
+            left: 0.75px;
+            width: 17.6px;
+        }
+
+        .MuiAccordionSummary-content {
+            order: 1;
+            margin-left: 0;
+        }
+
+        #panel1d-header {
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .MuiPaper-root {
+            border: none;
+        }
+
+        .MuiPaper-elevation {
+            width: 50%;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+
+        span {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .filter__model {
+        text-align: left;
+        padding-bottom: 6px;
+    }
+
+
+}
+

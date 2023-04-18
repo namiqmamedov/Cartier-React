@@ -24,13 +24,15 @@ const label = {
 const Product = () => {
     const [isDrawerOpen,
         setIsDrawerOpen] = useState(false)
+    const [isDrawerOpenSecond,
+            setIsDrawerOpenSecond] = useState(false)
 
     return ( <> <div className="product__top">
         <div className="product-content d-flex">
-            <Col lg='6' xs='12' className="thumbnail">
+            <Col lg='6' xs='12' sm='12' md='6' className="thumbnail">
                 <img src={mainModule03} alt="Product Content Image"/>
             </Col>
-            <Col lg='6' xs='12' className="text-main">
+            <Col lg='6' xs='12' sm='12' md='6' className="text-main">
                 <div className="wrapper-card">
                     <h1>TANK</h1>
                     <div className='description'>
@@ -56,6 +58,7 @@ const Product = () => {
                     <Breadcrumb.Item>TANK</Breadcrumb.Item>
                 </Breadcrumb>
 
+                <div className="filter-app">
                 <IconButton size='large' onClick={() => setIsDrawerOpen(true)}>
                     <button>
                         FILTER BY
@@ -71,14 +74,12 @@ const Product = () => {
                         <div className='filter-select'>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Header>FILTER BY</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
-                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                                <FormControlLabel control={< Checkbox />} label="AVAILABLE ONLINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="NEW"/>
                                             </FormControl>
                                         </div>
                                     </Accordion.Body>
@@ -88,16 +89,14 @@ const Product = () => {
                         </div>
                         <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>SUB-COLLECTION</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
-                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                                <FormControlLabel control={< Checkbox />} label="HER"/>
+                                                <FormControlLabel control={< Checkbox />} label="HIM"/>
                                             </FormControl>
                                         </div>
                                     </Accordion.Body>
@@ -107,16 +106,17 @@ const Product = () => {
                         </div>
                         <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Header>CASE MATERIAL</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
-                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                                <FormControlLabel control={< Checkbox />} label="WHITE GOLD"/>
+                                                <FormControlLabel control={< Checkbox />} label="ROSE GOLD"/>
+                                                <FormControlLabel control={< Checkbox />} label="YELLOW GOLD"/>
+                                                <FormControlLabel control={< Checkbox />} label="PLATINIUM"/>
+                                                <FormControlLabel control={< Checkbox />} label="STEEL"/>
                                             </FormControl>
                                         </div>
                                     </Accordion.Body>
@@ -126,16 +126,14 @@ const Product = () => {
                         </div>
                         <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>SUB-COLLECTION</Accordion.Header>
+                                    <Accordion.Header>WATCH SHAPE</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
-                                                <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                                <FormControlLabel control={< Checkbox />} label="SQUARE"/>
+                                                <FormControlLabel control={< Checkbox />} label="RECTANGULAR"/>
                                             </FormControl>
                                         </div>
                                     </Accordion.Body>
@@ -145,16 +143,71 @@ const Product = () => {
                         </div>
                         <div className="filter__model">
                         <div className='filter-select'>
-                            <Accordion>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>MOVEMENT</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="AUTOMATIC WINDING"/>
+                                                <FormControlLabel control={< Checkbox />} label="MANUAL WINDING"/>
+                                                <FormControlLabel control={< Checkbox />} label="QUARTZ"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>BRACELET / STRAP</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="INTERCHANGEABLE"/>
+                                                <FormControlLabel control={< Checkbox />} label="LEATHER"/>
+                                                <FormControlLabel control={< Checkbox />} label="METAL"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>CASE SIZE</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="LARGE MODEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="MEDIUM MODEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="SMALL MODEL"/>
+                                                <FormControlLabel control={< Checkbox />} label="VERY SMALL MODEL"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>SUB-COLLECTION</Accordion.Header>
                                     <Accordion.Body>
                                         <div className='filter-select'>
                                             <FormControl>
                                                 <FormControlLabel control={< Checkbox />} label="TANK MUST"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK AMÉRICAINE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK FRANÇAISE"/>
-                                                <FormControlLabel control={< Checkbox />} label="TANK LOUIS CARTIER"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK AMERICAINE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANK ASYMETRIQUE"/>
+                                                <FormControlLabel control={< Checkbox />} label="TANKCHINOISE"/>
                                             </FormControl>
                                         </div>
                                     </Accordion.Body>
@@ -165,6 +218,39 @@ const Product = () => {
                         </Typography>
                     </Box>
                 </Drawer>
+                <IconButton size='large' onClick={() => setIsDrawerOpenSecond(true)}>
+                    <button>
+                        SORT BY
+                    </button>
+                </IconButton>
+                <Drawer
+                    anchor='bottom'
+                    open={isDrawerOpenSecond}
+                    onClose={() => setIsDrawerOpenSecond(false)}>
+                    <Box textAlign='left'>
+                        <Typography variant='h6' component='div'>
+                        <div className="filter__model">
+                        <div className='filter-select'>
+                            <Accordion defaultActiveKey={['0']} alwaysOpen>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>SORT BY</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className='filter-select'>
+                                            <FormControl>
+                                                <FormControlLabel control={< Checkbox />} label="PRICE LOW TO HIGH"/>
+                                                <FormControlLabel control={< Checkbox />} label="PRICE HIGH TO LOW"/>
+                                                <FormControlLabel control={< Checkbox />} label="RECOMMENDED"/>
+                                            </FormControl>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                        </div>
+                        </Typography>
+                    </Box>
+                </Drawer>
+                </div>
                 <div className="product-model">
                     <div className="product-count">
                         <span>52 Models</span>
@@ -181,7 +267,7 @@ const Product = () => {
                 </button>
             </div>
             <div className="product-index">
-                <div className="product__filter col-lg-3">
+                <div className="product__filter col-lg-3 col-md-3">
                     <div className="filter__model">
                         SORT BY
                         <div className='filter-select'>
@@ -232,7 +318,6 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="filter__model">
-
                         <div className='filter-select'>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 <Accordion.Item eventKey="0">
@@ -360,7 +445,7 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product__main col-lg-9">
+                <div className="product__main col-lg-9 col-md-9">
                     <ProductCard/>
                 </div>
             </div>

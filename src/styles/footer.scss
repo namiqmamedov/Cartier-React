@@ -115,15 +115,45 @@
     }
 }
 
+.accordion{
+    display: none;
+}
+
 
 @media screen and (max-width: 576px){
     .footer-index{
         .footer-main{
             flex-direction: column;
+            padding: 0;
         }
         .router-wrapper{
-            width: 100%;
-            flex-direction: column;
+            display: none !important;
+        }
+
+        .accordion{
+            display: block;
+
+            .accordion-item{
+                border: none;
+                padding-bottom: 10px;
+            }
+
+            .accordion-button{
+                padding: 0;
+
+            }
+
+            button{
+                background-color: transparent;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+
+            .accordion-button:not(.collapsed){
+                box-shadow: none;
+               
+            }
         }
 
         .social-link{
