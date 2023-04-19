@@ -190,6 +190,44 @@
     }
 }
 
+
+.product-detail-index{
+    margin-top: 18px;
+
+    .product-card{
+        width: 49%;
+
+        &:first-child{
+            width: 99%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+
+    .product-thumbnail{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .product-content{
+        padding-left: 88px;
+        .product-title{
+            font-size: 22px;
+            font-family: 'Montserrat',sans-serif;
+            font-weight: bold;
+        }
+        .prd-description{
+            span{
+                font-size: 15px;
+            font-family: 'Montserrat',sans-serif;
+            }
+
+        }
+    }
+}
+
 .filter-app{
     display: none;
 }
@@ -378,8 +416,7 @@
         }
     
         .product-index {
-            flex-direction: column;
-    
+            display: block;
     
             .product__main {
                 flex-wrap: wrap;
@@ -1358,7 +1395,7 @@
 
             
         .product-model {
-            padding-left: 48px !important;
+            padding-left: 32px !important;
         }
     
         .product-index {
@@ -1378,7 +1415,8 @@
     }
 
     .breadcrumb{
-        max-width: 290px;
+        margin-bottom: 0 !important;
+        max-width: 100%;
     }
 
     .MuiPaper-elevation {

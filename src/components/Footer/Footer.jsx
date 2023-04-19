@@ -21,9 +21,15 @@ import {BsTwitter} from 'react-icons/bs';
 import {TfiYoutube} from 'react-icons/tfi';
 import {FaPinterestP} from 'react-icons/fa';
 import Accordion from 'react-bootstrap/Accordion';
+import Module from '../../components/UI/module-item/Module';
+
 
 const Footer = () => {
     return (
+        <>
+        <div className="module-container">
+            <Module/>
+        </div>
         <footer>
             <div className="footer-banner text-center">
                 <form action="#" method='post'>
@@ -307,6 +313,7 @@ const Footer = () => {
                 </Container>
             </div>
         </footer>
+        </>
     )
 }
 

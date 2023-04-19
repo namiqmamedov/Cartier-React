@@ -4,6 +4,9 @@
   border-top: 1px solid rgba(29, 28, 28, 0.2);
   border-bottom: 1px solid rgba(29, 28, 28, 0.2);
 }
+.footer-index .accordion {
+  display: none;
+}
 .footer-index .footer-main {
   display: flex;
   padding: 0 54px;
@@ -90,11 +93,27 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.accordion {
-  display: none;
-}
-
 @media screen and (max-width: 576px) {
+  .module-container .module-item a {
+    justify-content: center;
+    padding-left: 0;
+    color: black !important;
+  }
+  .module-container .module-item a:after {
+    display: none !important;
+  }
+  .footer-index .accordion {
+    display: block;
+  }
+  .footer-index .accordion .accordion-body {
+    padding: 0;
+  }
+  .footer-index .accordion button {
+    color: black !important;
+  }
+  .footer-index .router-item ul {
+    gap: 1.3rem !important;
+  }
   .footer-index .footer-main {
     flex-direction: column;
     padding: 0;

@@ -27,7 +27,8 @@ const Product = () => {
     const [isDrawerOpenSecond,
             setIsDrawerOpenSecond] = useState(false)
 
-    return ( <> <div className="product__top">
+    return ( <> 
+    <div className="product__top">
         <div className="product-content d-flex">
             <Col lg='6' xs='12' sm='12' md='6' className="thumbnail">
                 <img src={mainModule03} alt="Product Content Image"/>
@@ -57,7 +58,6 @@ const Product = () => {
                     </Breadcrumb.Item>
                     <Breadcrumb.Item>TANK</Breadcrumb.Item>
                 </Breadcrumb>
-
                 <div className="filter-app">
                 <IconButton size='large' onClick={() => setIsDrawerOpen(true)}>
                     <button>

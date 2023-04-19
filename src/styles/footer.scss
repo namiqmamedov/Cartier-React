@@ -3,6 +3,8 @@
     padding-bottom: 43px;
     border-top: 1px solid rgba(29,28,28,.2);
     border-bottom: 1px solid rgba(29,28,28,.2);
+    
+    .accordion{display: none;}
     .footer-main {
         display: flex;
         padding: 0 54px;
@@ -115,13 +117,38 @@
     }
 }
 
-.accordion{
-    display: none;
-}
-
 
 @media screen and (max-width: 576px){
+
+    .module-container{
+        .module-item{
+            a{
+                justify-content: center;
+                padding-left: 0;
+                color: black !important;
+
+                &:after{
+                    display: none !important;
+                }
+            }
+        }
+    }
     .footer-index{
+        .accordion{display: block;
+            .accordion-body{
+                padding: 0;
+            }
+
+            button{
+                color: black !important;
+            }
+        }
+
+        .router-item{
+            ul{
+                gap: 1.3rem !important;
+            }
+        }
         .footer-main{
             flex-direction: column;
             padding: 0;

@@ -16,7 +16,6 @@ import moduleCenter01 from '../assets/images/moduleCenter01.webp'
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'
-import Module from '../components/UI/module-item/Module';
 import Carousel from '../components/UI/slider/Carousel';
 
 
@@ -147,11 +146,7 @@ const Home = () => {
                 </div>
             </Row>
         </Container>
-
-        <div className="module-container">
-            <Module/>
-        </div>
-
+    
     </main>
      </>
     )

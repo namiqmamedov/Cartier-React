@@ -30,7 +30,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const productData = [
+export const productData = [
     {
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, steel',
@@ -76,47 +76,47 @@ const productData = [
         slider03: fourthWatch03,
         slider04: fourthWatch04,
     },
-    // {
-    //     title: 'TANK FRANÇAISE WATCH',
-    //     description: 'Medium model, quartz movement, yellow gold',
-    //     price: '24,300.00',
-    //     slider01: fourthWatch01,
-    //     slider02: fourthWatch02,
-    //     slider03: fourthWatch03,
-    //     slider04: fourthWatch04,
-    // },
-    // {
-    //     title: 'TANK FRANÇAISE WATCH',
-    //     description: 'Medium model, quartz movement, yellow gold',
-    //     price: '24,300.00',
-    //     slider01: fourthWatch01,
-    //     slider02: fourthWatch02,
-    //     slider03: fourthWatch03,
-    //     slider04: fourthWatch04,
-    // },
-    // {
-    //     title: 'TANK FRANÇAISE WATCH',
-    //     description: 'Medium model, quartz movement, yellow gold',
-    //     price: '24,300.00',
-    //     slider01: fourthWatch01,
-    //     slider02: fourthWatch02,
-    //     slider03: fourthWatch03,
-    //     slider04: fourthWatch04,
-    // },
-    // {
-    //     title: 'TANK FRANÇAISE WATCH',
-    //     description: 'Medium model, quartz movement, yellow gold',
-    //     price: '24,300.00',
-    //     slider01: fourthWatch01,
-    //     slider02: fourthWatch02,
-    //     slider03: fourthWatch03,
-    //     slider04: fourthWatch04,
-    // },
+    {
+        title: 'TANK FRANÇAISE WATCH',
+        description: 'Medium model, quartz movement, yellow gold',
+        price: '24,300.00',
+        slider01: fourthWatch01,
+        slider02: fourthWatch02,
+        slider03: fourthWatch03,
+        slider04: fourthWatch04,
+    },
+    {
+        title: 'TANK FRANÇAISE WATCH',
+        description: 'Medium model, quartz movement, yellow gold',
+        price: '24,300.00',
+        slider01: fourthWatch01,
+        slider02: fourthWatch02,
+        slider03: fourthWatch03,
+        slider04: fourthWatch04,
+    },
+    {
+        title: 'TANK FRANÇAISE WATCH',
+        description: 'Medium model, quartz movement, yellow gold',
+        price: '24,300.00',
+        slider01: fourthWatch01,
+        slider02: fourthWatch02,
+        slider03: fourthWatch03,
+        slider04: fourthWatch04,
+    },
+    {
+        title: 'TANK FRANÇAISE WATCH',
+        description: 'Medium model, quartz movement, yellow gold',
+        price: '24,300.00',
+        slider01: fourthWatch01,
+        slider02: fourthWatch02,
+        slider03: fourthWatch03,
+        slider04: fourthWatch04,
+    },
 ]
 
 const ProductCard = () => {
     return ( <> {
-        productData.map((item, index) => (
+      productData.map((item, index) => (
             <Card>
                 <Link>
                     <div className='product__wishlist'>
