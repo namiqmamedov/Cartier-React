@@ -1,6 +1,6 @@
 .product__top {
   margin-top: 1px;
-  margin-bottom: 50px;
+  padding-bottom: 12px;
 }
 .product__top .thumbnail img {
   width: 100%;
@@ -140,36 +140,6 @@
 }
 .product__main-item .product-index span {
   font-size: 12px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.product-detail-index {
-  margin-top: 18px;
-}
-.product-detail-index .product-card {
-  width: 49%;
-}
-.product-detail-index .product-card:first-child {
-  width: 99%;
-}
-.product-detail-index img {
-  width: 100%;
-}
-.product-detail-index .product-thumbnail {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-.product-detail-index .product-content {
-  padding-left: 88px;
-}
-.product-detail-index .product-content .product-title {
-  font-size: 22px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-}
-.product-detail-index .product-content .prd-description span {
-  font-size: 15px;
   font-family: "Montserrat", sans-serif;
 }
 

@@ -1,6 +1,6 @@
 .product__top {
     margin-top: 1px;
-    margin-bottom: 50px;
+    padding-bottom: 12px;
 
     .thumbnail {
         img {
@@ -191,43 +191,6 @@
 }
 
 
-.product-detail-index{
-    margin-top: 18px;
-
-    .product-card{
-        width: 49%;
-
-        &:first-child{
-            width: 99%;
-        }
-    }
-    img{
-        width: 100%;
-    }
-
-    .product-thumbnail{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-    }
-
-    .product-content{
-        padding-left: 88px;
-        .product-title{
-            font-size: 22px;
-            font-family: 'Montserrat',sans-serif;
-            font-weight: bold;
-        }
-        .prd-description{
-            span{
-                font-size: 15px;
-            font-family: 'Montserrat',sans-serif;
-            }
-
-        }
-    }
-}
-
 .filter-app{
     display: none;
 }
@@ -235,8 +198,6 @@
 .product__main {
     flex-wrap: wrap;
     display: flex;
-
-
     a {
         &:hover {
             color: inherit;
@@ -623,7 +584,6 @@
 
 
 }
-
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     .container {

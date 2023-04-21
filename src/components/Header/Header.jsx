@@ -123,7 +123,6 @@ const Header = () => {
                         </NavLink>
                     ))} */}
                     <div className="nav-index-top">
-
                         <Col lg='3' className="nav-content-first">
                             <a href="#">
                                 UNITED STATES

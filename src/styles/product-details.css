@@ -1,0 +1,152 @@
+.product-detail-index {
+  margin-top: 18px;
+}
+.product-detail-index nav {
+  padding-bottom: 16.6px;
+}
+.product-detail-index .product-card {
+  width: 49%;
+}
+.product-detail-index .product-card:first-child {
+  width: 99%;
+}
+.product-detail-index img {
+  width: 100%;
+}
+.product-detail-index .product-thumbnail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.product-detail-index .product-content {
+  padding-left: 88px;
+  padding-right: 44px;
+}
+.product-detail-index .product-content .product-title {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.product-detail-index .product-content .prd-description span {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.product-detail-index .product-content .nav-tabs {
+  margin-top: 25px;
+  border-bottom: 0;
+}
+.product-detail-index .product-content .nav-tabs .nav-link {
+  display: flex;
+  border: none;
+  align-items: center;
+}
+.product-detail-index .product-content .nav-tabs li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  min-height: 85px;
+  width: 100%;
+}
+.product-detail-index .product-content .nav-tabs li a {
+  color: black;
+  width: 100%;
+}
+.product-detail-index .product-content .nav-tabs li svg {
+  margin-left: auto;
+}
+.product-detail-index .product-content .nav-tabs .product-icon {
+  padding-right: 15px;
+}
+.product-detail-index .product-content .nav-tabs .product-icon::before {
+  background-image: url("../assets/images/engraving.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: " ";
+  display: block;
+  height: 36px;
+  width: 17px;
+}
+.product-detail-index .product-content .price-sales {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 15px;
+  display: block;
+  letter-spacing: 0.1em;
+}
+.product-detail-index .product-content .product__main-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.product-detail-index .product-content .product__main-btn .addToBag {
+  width: 86%;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.product-detail-index .product-content .product__main-btn .addToBag:hover {
+  color: black;
+  background-color: white;
+}
+.product-detail-index .product-content .product__main-btn .wish-list-product {
+  width: 2.8125rem;
+  height: 2.1875rem;
+  border: 0.0625rem solid #1d1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail-index .product-content .product__bottom-wrapper {
+  margin-top: 25px;
+}
+.product-detail-index .product-content .product__bottom-wrapper .product-link {
+  padding-bottom: 14px;
+}
+.product-detail-index .product-content .product__bottom-wrapper .product-link svg {
+  margin-right: 20px;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: black;
+  opacity: 0.6;
+}
+.product-detail-index .product-content .product__bottom-wrapper .product-link button {
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.product-detail-index .product-content .product__bottom-wrapper .product-link a {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.MuiBox-root {
+  text-align: center !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 530px;
+  height: 230px;
+  background-color: white;
+  padding: 4;
+}
+.MuiBox-root h2 {
+  border-top: 6px solid #d50032;
+  padding-top: 20px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.MuiBox-root p {
+  padding-top: 60px;
+}
+.MuiBox-root p svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 33px;
+}
+.MuiBox-root p svg:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=product-details.css.map */
