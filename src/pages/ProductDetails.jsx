@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import {NavLink, Link} from 'react-router-dom'
 import ProductCard from '../components/UI/product-card/ProductCard';
+import ProductRelated from '../components/UI/product-card/ProductRelated';
 import firstWatch01 from '../assets/images/product/watch/watch001.avif'
 import firstWatch02 from '../assets/images/product/watch/watch002.avif'
 import firstWatch03 from '../assets/images/product/watch/watch003.avif'
@@ -10,7 +12,8 @@ import firstWatch06 from '../assets/images/product/watch/watch006.avif'
 import firstWatch07 from '../assets/images/product/watch/watch007.avif'
 import firstWatch08 from '../assets/images/product/watch/watch008.avif'
 import firstWatch09 from '../assets/images/product/watch/watch009.avif'
-import firstWatch010 from '../assets/images/product/watch/watch0010.avif'
+import watch from '../assets/images/product/watch.webp'
+import wrapper from '../assets/images/product/cartierProd.jpeg'
 import {IoIosArrowForward} from 'react-icons/io'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {BsTelephone} from 'react-icons/bs'
@@ -53,7 +56,11 @@ const ProductDetails = () => {
         setOpen(false);
     };
 
-    return ( <> <div className="product-detail-index">
+    const [hotPizza, setHotPizza] = useState([])
+
+    return ( <>
+     <div className="product-detail-index">
+        
         <div className="container">
             <div className="row">
                 <Breadcrumb>
@@ -68,6 +75,7 @@ const ProductDetails = () => {
                 </Breadcrumb>
             </div>
         </div>
+
         <div className="container">
             <div className="row">
                 <div className="product__detail d-flex">
@@ -164,7 +172,10 @@ const ProductDetails = () => {
                             </div>
                         </div>
                         <div className="product__footer">
-                            <ModalButton onClick={handleOpen}>SHARE</ModalButton>
+                            <ModalButton onClick={handleOpen}>
+                                <BsShare/>
+                                SHARE
+                            </ModalButton>
                             <Modal
                                 open={open}
                                 onClose={handleClose}
@@ -187,11 +198,76 @@ const ProductDetails = () => {
                                     </Typography>
                                 </Box>
                             </Modal>
+                            <div className="product-code">
+                                Ref. WSTA0074
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div className="product__detail-main">
+            <div className="container">
+                <div className="row">
+                    <div className="content-wrapper col-lg-5">
+                         <h1>Cartier Care</h1>
+                         <div className="description">
+                            <p>Please enjoy an extension of the International Limited Warranty for up to 8 years and take advantage of a wide range of exclusive services.</p>
+                        </div>
+                        <div className="discover">
+                            <a href="#">
+                                Discover More
+                            </a>
+                        </div>           
+                    </div>
+                    <div className="thumbnail col-lg-7">
+                        <img src={watch} alt="watch" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="product__wrapper">
+            <div className="gift__center col-lg-7">
+            <div className="thumbnail">
+                <img src={wrapper} alt="product wrapper image" />
+            </div>
+            <div className="gift-wrapping">
+                <h1 className='title'>       
+                    Gift Wrapping
+                </h1>
+                <div className="description">
+                    <p>
+                    Send your presents in our signature packaging with a personalised greetings card included.
+                    </p>
+                </div>
+                <Link>
+                 Read More
+                </Link>
+            </div>  
+            </div>
+            <div className="return__center col-lg-5">
+                <h1 className='title'>       
+                    SHIPPING / RETURN
+                </h1>
+                <div className="description">
+                    <p>
+                    We offer different delivery options. 
+                    Choose the one you prefer at the checkout. You may return or exchange your Cartier creation within 30 days.
+                    </p>
+                </div>
+                <Link>
+                 Read More
+                </Link>
+            </div>                     
+        </div>
+
+        <div className="recommended-slot">
+            <h1 className='text-center'>You may also like</h1>
+                    <ProductRelated/>
+        </div>
+
     </div> </>)
 }
 
