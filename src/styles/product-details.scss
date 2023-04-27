@@ -27,6 +27,14 @@
         padding-left: 88px;
         padding-right: 44px;
 
+        .product__content-index{
+            position: sticky;
+    top: -185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+        }
+
         .product-title {
             font-size: 22px;
             font-family: 'Montserrat', sans-serif;
@@ -232,6 +240,7 @@
 }
 
 .product__detail-main {
+    padding-bottom: 140px;
     h1 {
         font-size: 22px;
         font-family: 'Montserrat', sans-serif;
@@ -252,6 +261,7 @@
 .product__wrapper {
     display: flex;
     padding: 0 20px;
+    margin-bottom: 110px;
 
     .gift__center {
         display: flex;
@@ -317,5 +327,56 @@
 }
 
 .product__main{
+    display: block;
     margin: 0 auto;
+
+    .slick-next:before {
+        position: absolute;
+        font-family: 'FontAwesome';
+        top: 0;
+        left: 10px;
+        content: "\f005";
+      }
+
+    .card__thumbnail{
+        position: relative;
+       
+        
+        .secondImage{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            object-fit: contain;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+
+        &:hover{
+            .secondImage{
+                opacity: 1;
+            }
+        }
+    }
+    
+
+}
+
+.brand__panthere{
+    text-align: center;
+    padding-bottom: 80px;
+    img{
+        width: 9%;
+    }
+}
+
+.long-text{
+    max-height: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.expanded{
+    max-height: 100%;
 }

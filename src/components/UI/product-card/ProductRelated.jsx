@@ -109,7 +109,7 @@ const ProductRelated = () => {
                         </div>
                         <div className="card__thumbnail">
                             <Card.Img variant="top" src={item.slider01}/>
-                            <Card.Img variant="top" src={item.slider04}/>
+                            <Card.Img variant="top" className='secondImage' src={item.slider04}/>
                         </div>
                         <Card.Body>
                             <Card.Title>{item.title}</Card.Title>
