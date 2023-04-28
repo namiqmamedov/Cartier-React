@@ -1,0 +1,25 @@
+.login-section .tab-title {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.login-section .tab-title a {
+  padding-right: 55px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+.login-section .login__wrapper {
+  background-color: #f9f9f9;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.login-section .login__wrapper .login__body {
+  max-width: 26rem;
+  margin: 0 auto;
+}
+.login-section .login__wrapper .login__body .login-title {
+  padding-top: 25px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=login.css.map */
