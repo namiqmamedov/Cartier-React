@@ -579,10 +579,7 @@
 
     .filter__model {
         text-align: left;
-
     }
-
-
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -836,8 +833,6 @@
         text-align: left;
 
     }
-
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -1534,35 +1529,4 @@
     }
 
 
-}
-
-
-@media only screen and (max-width: 576px){
-    .product__detail{
-        flex-wrap: wrap;
-
-        .product-content{
-            padding-top: 30px;
-            padding-right: 0 !important;
-            padding-left: 0 !important;
-        }
-    }
-
-    .product__detail-main{
-        .content-wrapper{
-            order: 1;
-            padding-left: 12px;
-            padding-top: 16px;
-        }
-    }
-
-    .product__wrapper{
-        flex-wrap: wrap;
-    }
-
-    .brand__panthere{
-        img{
-            width: 24% !important;
-        }
-    }
 }

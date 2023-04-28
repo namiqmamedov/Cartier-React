@@ -14,6 +14,8 @@ import fourthWatch04 from '../../../assets/images/product/watch/watch16.avif'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {MdNavigateNext} from 'react-icons/md'
+import {MdNavigateBefore} from 'react-icons/md'
 
 export const productData = [
     {
@@ -82,14 +84,25 @@ const ProductRelated = () => {
         slidesToShow: 3,
         slidesToScroll: 2,
         draggable: true,
+        prevArrow: <MdNavigateBefore/>,
+        nextArrow: <MdNavigateNext/>,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     arrows: false,
                     slidesToShow: 3
                 }
-            }, {
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 480,
                 settings: {
                     arrows: false,

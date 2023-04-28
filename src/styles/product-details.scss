@@ -27,12 +27,12 @@
         padding-left: 88px;
         padding-right: 44px;
 
-        .product__content-index{
+        .product__content-index {
             position: sticky;
-    top: -185px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+            top: -185px;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         .product-title {
@@ -241,6 +241,7 @@
 
 .product__detail-main {
     padding-bottom: 140px;
+
     h1 {
         font-size: 22px;
         font-family: 'Montserrat', sans-serif;
@@ -326,23 +327,47 @@
     }
 }
 
-.product__main{
+.product__main {
     display: block;
     margin: 0 auto;
 
-    .slick-next:before {
-        position: absolute;
-        font-family: 'FontAwesome';
-        top: 0;
-        left: 10px;
-        content: "\f005";
-      }
+    .slick-prev {
+        color: black;
+        left: -50px;
+        height: 30px;
+        top: 35%;
+        width: 30px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        opacity: .3;
+    }
 
-    .card__thumbnail{
+    .slick-next {
+        color: black;
+        right: -50px;
+        height: 25px;
+        top: 35%;
+        width: 25px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        opacity: .3;
+    }
+
+    .slick-disabled {
+        display: none;
+    }
+
+    .card__thumbnail {
         position: relative;
-       
-        
-        .secondImage{
+
+
+        .secondImage {
             position: absolute;
             top: 0;
             right: 0;
@@ -353,30 +378,115 @@
             transition: .3s ease-in-out;
         }
 
-        &:hover{
-            .secondImage{
+        &:hover {
+            .secondImage {
                 opacity: 1;
             }
         }
     }
-    
+
 
 }
 
-.brand__panthere{
+.brand__panthere {
     text-align: center;
     padding-bottom: 80px;
-    img{
+
+    img {
         width: 9%;
     }
 }
 
-.long-text{
+.long-text {
     max-height: 0;
     overflow: hidden;
     display: inline-block;
 }
 
-.expanded{
+.expanded {
     max-height: 100%;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .product__detail {
+        flex-wrap: wrap;
+
+        .product-content {
+            padding-top: 30px;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+
+    .product__detail-main {
+        .content-wrapper {
+            order: 1;
+            padding-left: 12px;
+            padding-top: 16px;
+        }
+    }
+
+    .product__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .brand__panthere {
+        img {
+            width: 24% !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .product__detail {
+        flex-wrap: wrap;
+
+        .product-content {
+            padding-top: 30px;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+    }
+
+    .product__detail-main {
+        .content-wrapper {
+            order: 1;
+            padding-left: 12px;
+            padding-top: 16px;
+        }
+    }
+
+    .product__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .brand__panthere {
+        img {
+            width: 24% !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    
+    .product-detail-index {
+        .product-card {
+            width: 48% ;
+        }
+
+        .gift-wrapping{
+            padding: 35px 49px !important;
+        }
+
+        .MuiButtonBase-root svg{
+            width: 2rem !important;
+        }
+
+        .breadcrumb{
+            max-width: 350px;
+        }
+    }
 }

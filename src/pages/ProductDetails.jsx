@@ -282,7 +282,7 @@ const ProductDetails = () => {
 
                 <div className="recommended-slot">
                     <h1 className='text-center mb-4'>You may also like</h1>
-                        <div className="product__main col-lg-6 col-md-4 col-sm-6 col-xs-6">
+                        <div className="product__main col-lg-6 col-md-9 col-sm-6 col-xs-6">
                             <ProductRelated/>
                     </div>
                 </div>

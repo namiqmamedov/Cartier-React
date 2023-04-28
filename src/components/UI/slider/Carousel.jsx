@@ -7,6 +7,8 @@ import cardImg02 from '../../../assets/images/cardImg02.jpg'
 import cardImg03 from '../../../assets/images/cardImg03.jpg'
 import cardImg04 from '../../../assets/images/cardImg04.jpg'
 import cardImg05 from '../../../assets/images/cardImg05.jpg'
+import {MdNavigateNext} from 'react-icons/md'
+import {MdNavigateBefore} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 import '../../../styles/slider.css'
 
@@ -24,12 +26,15 @@ const sliderData = [
     }
 ]
 
+
 function Carousel() {
     const settings = {
         infinite: false,
         slidesToShow: 3.35,
         slidesToScroll: 2,
         draggable: false,
+        prevArrow: <MdNavigateBefore/>,
+        nextArrow: <MdNavigateNext/>,
         responsive: [
           {
             breakpoint: 768,
@@ -47,6 +52,7 @@ function Carousel() {
           },
         ],
     };
+    
     return (
             <Slider {...settings}>
                 {sliderData.map((item, index) => (

@@ -273,12 +273,30 @@
   display: block;
   margin: 0 auto;
 }
-.product__main .slick-next:before {
-  position: absolute;
-  font-family: "FontAwesome";
-  top: 0;
-  left: 10px;
-  content: "\f005";
+.product__main .slick-prev {
+  color: black;
+  left: -50px;
+  height: 30px;
+  top: 35%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+.product__main .slick-next {
+  color: black;
+  right: -50px;
+  height: 25px;
+  top: 35%;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+.product__main .slick-disabled {
+  display: none;
 }
 .product__main .card__thumbnail {
   position: relative;
@@ -314,4 +332,61 @@
 
 .expanded {
   max-height: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .product__detail {
+    flex-wrap: wrap;
+  }
+  .product__detail .product-content {
+    padding-top: 30px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .product__detail-main .content-wrapper {
+    order: 1;
+    padding-left: 12px;
+    padding-top: 16px;
+  }
+  .product__wrapper {
+    flex-wrap: wrap;
+  }
+  .brand__panthere img {
+    width: 24% !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product__detail {
+    flex-wrap: wrap;
+  }
+  .product__detail .product-content {
+    padding-top: 30px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .product__detail-main .content-wrapper {
+    order: 1;
+    padding-left: 12px;
+    padding-top: 16px;
+  }
+  .product__wrapper {
+    flex-wrap: wrap;
+  }
+  .brand__panthere img {
+    width: 24% !important;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .product-detail-index .product-card {
+    width: 48%;
+  }
+  .product-detail-index .gift-wrapping {
+    padding: 35px 49px !important;
+  }
+  .product-detail-index .MuiButtonBase-root svg {
+    width: 2rem !important;
+  }
+  .product-detail-index .breadcrumb {
+    max-width: 350px;
+  }
 }/*# sourceMappingURL=product-details.css.map */

@@ -1,10 +1,10 @@
 .main__card-item {
-
+    margin-bottom: 60px;
     .slick-prev {
-        background: black;
+        color: black;
         left: 1px;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         background-color: rgb(238, 238, 238);
         border-radius: 24px;
         display: flex;
@@ -12,20 +12,13 @@
         justify-content: center;
         -webkit-box-align: center;
         align-items: center;
-        background-size: cover;
-        background-position: center;
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' viewBox='0 0 24 24' role='img' width='24px' height='24px' fill='none'><path stroke='currentColor' stroke-width='1.5' d='M15.525 18.966L8.558 12l6.967-6.967'></path></svg>");
-        transition: background-color 250ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
-        &::before{
-            display: none;
-        }
     }
 
     .slick-next {
-        background: black;
+        color: black;
         right: 1px;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         background-color: rgb(238, 238, 238);
         border-radius: 24px;
         display: flex;
@@ -33,14 +26,6 @@
         justify-content: center;
         -webkit-box-align: center;
         align-items: center;
-        background-size: cover;
-        background-position: center;
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' viewBox='0 0 24 24' role='img' width='24px' height='24px' fill='none'><path stroke='currentColor' stroke-width='1.5' d='M8.474 18.966L15.44 12 8.474 5.033'></path></svg>");
-        transition: background-color 250ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
-
-        &::before{
-            display: none;
-        }
     }
 
     .slick-list {
