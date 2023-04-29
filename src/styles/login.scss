@@ -1,29 +1,141 @@
-.login-section{
-    .tab-title{
+.login-section {
+    .tab-title {
         margin-top: 70px;
         margin-bottom: 70px;
-        a{
+
+        a {
             padding-right: 55px;
             font-size: 22px;
-            font-family: 'Montserrat',sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
     }
-    .login__wrapper{
+
+    .login__wrapper {
         background-color: #f9f9f9;
-        max-width: 64rem;
+        max-width: 55rem;
         margin: 0 auto;
         padding-top: 30px;
         padding-bottom: 30px;
+        margin-bottom: 90px;
 
-        .login__body{
+        .login__body {
             max-width: 26rem;
             margin: 0 auto;
 
-            .login-title{
+            .login-title {
                 padding-top: 25px;
+                padding-bottom: 19px;
                 font-size: 15px;
-                font-family: 'Montserrat',sans-serif;
+                font-family: 'Montserrat', sans-serif;
             }
+
+            .form-required-text {
+                padding-top: 10px;
+                text-align: end;
+                padding-bottom: 0;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .email {
+                padding-bottom: 18px;
+            }
+
+            input {
+                padding-bottom: 15px;
+            }
+
+            .MuiFormControl-root {
+                width: 100%;
+            }
+
+            .forgot-password {
+                padding-top: 25px;
+                padding-bottom: 15px;
+            }
+
+            .form-actions {
+                margin-top: 40px;
+                text-align: center;
+
+                button {
+                    display: inline-block;
+                    padding: 0.75em 1.85em;
+                    border: 0.0625rem solid;
+                    border-radius: 0;
+                    font-size: .75rem;
+                    font-weight: 600;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background: black;
+                    color: white;
+                    transition: .3s ease-in-out;
+                    font-family: 'Montserrat', sans-serif;
+
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+                }
+            }
+
         }
     }
+}
+
+.modal__body {
+    .form-title {
+        font-size: 14px;
+        text-align: left;
+        padding-top: 10px !important;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .forgot__email-input {
+        width: 100%;
+    }
+
+    button {
+        display: inline-block;
+        padding: 0.75em 1.85em;
+        border: 0.0625rem solid;
+        border-radius: 0;
+        font-size: .75rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        background: black;
+        color: white;
+        transition: .3s ease-in-out;
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+            background: white;
+            color: black;
+        }
+    }
+
+}
+
+.modal__forgot-pass {
+    height: 350px !important;
+
+    .close-modal{
+        cursor: pointer;
+        text-align: end;
+        margin-top: -33px;
+    padding-right: 36px;
+    svg{
+        width: 1.5rem;
+        height: 1.5rem;
+        opacity: .5;
+    }
+    }
+
+}
+
+.modal-pass {
+    padding-top: 20px !important;
+    padding: 0px 100px;
+
 }

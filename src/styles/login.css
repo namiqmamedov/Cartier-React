@@ -9,10 +9,11 @@
 }
 .login-section .login__wrapper {
   background-color: #f9f9f9;
-  max-width: 64rem;
+  max-width: 55rem;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 90px;
 }
 .login-section .login__wrapper .login__body {
   max-width: 26rem;
@@ -20,6 +21,96 @@
 }
 .login-section .login__wrapper .login__body .login-title {
   padding-top: 25px;
+  padding-bottom: 19px;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
+}
+.login-section .login__wrapper .login__body .form-required-text {
+  padding-top: 10px;
+  text-align: end;
+  padding-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.login-section .login__wrapper .login__body .email {
+  padding-bottom: 18px;
+}
+.login-section .login__wrapper .login__body input {
+  padding-bottom: 15px;
+}
+.login-section .login__wrapper .login__body .MuiFormControl-root {
+  width: 100%;
+}
+.login-section .login__wrapper .login__body .forgot-password {
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.login-section .login__wrapper .login__body .form-actions {
+  margin-top: 40px;
+  text-align: center;
+}
+.login-section .login__wrapper .login__body .form-actions button {
+  display: inline-block;
+  padding: 0.75em 1.85em;
+  border: 0.0625rem solid;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  transition: 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+.login-section .login__wrapper .login__body .form-actions button:hover {
+  background: white;
+  color: black;
+}
+
+.modal__body .form-title {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 10px !important;
+  font-family: "Montserrat", sans-serif;
+}
+.modal__body .forgot__email-input {
+  width: 100%;
+}
+.modal__body button {
+  display: inline-block;
+  padding: 0.75em 1.85em;
+  border: 0.0625rem solid;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  transition: 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+.modal__body button:hover {
+  background: white;
+  color: black;
+}
+
+.modal__forgot-pass {
+  height: 350px !important;
+}
+.modal__forgot-pass .close-modal {
+  cursor: pointer;
+  text-align: end;
+  margin-top: -33px;
+  padding-right: 36px;
+}
+.modal__forgot-pass .close-modal svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.5;
+}
+
+.modal-pass {
+  padding-top: 20px !important;
+  padding: 0px 100px;
 }/*# sourceMappingURL=login.css.map */
