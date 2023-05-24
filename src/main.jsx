@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
+import { Provider } from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 ReactDOM
@@ -10,6 +11,6 @@ ReactDOM
     .render(
         <React.StrictMode>
         <Router>
-            <App/>
+                <App/>
         </Router>
     </React.StrictMode>,)

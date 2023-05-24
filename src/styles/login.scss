@@ -10,6 +10,20 @@
         }
     }
 
+    .radio__group-item{
+        display: block !important;
+    }
+
+    .form-date-group{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-tabs{
+        display: flex;
+        justify-content: center;
+    }
+
     .login__wrapper {
         background-color: #f9f9f9;
         max-width: 55rem;

@@ -18,6 +18,7 @@ import fourthWatch04 from '../assets/images/product/watch/watch16.avif'
 
 const productData = [
     {
+        id: 1,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, steel',
         price: '4,450.00',
@@ -27,6 +28,7 @@ const productData = [
         slider04: firstWatch04,
     },
     {
+        id: 2,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Small model, quartz movement, steel',
         price: '3,550.00',
@@ -36,6 +38,7 @@ const productData = [
         slider04: secondWatch04,
     },
     {
+        id: 3,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Large model, automatic mechanical movement, steel',
         price: '5,500.00',
@@ -45,6 +48,7 @@ const productData = [
         slider04: thirdWatch04,
     },
     {
+        id: 4,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',
@@ -54,6 +58,7 @@ const productData = [
         slider04: fourthWatch04,
     },
      {
+        id: 5,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',
@@ -63,6 +68,7 @@ const productData = [
         slider04: fourthWatch04,
     },
     {
+        id: 6,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',
@@ -72,6 +78,7 @@ const productData = [
         slider04: fourthWatch04,
     },
     {
+        id: 7,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',
@@ -81,6 +88,7 @@ const productData = [
         slider04: fourthWatch04,
     },
     {
+        id: 8,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',
@@ -90,6 +98,7 @@ const productData = [
         slider04: fourthWatch04,
     },
     {
+        id: 9,
         title: 'TANK FRANÇAISE WATCH',
         description: 'Medium model, quartz movement, yellow gold',
         price: '24,300.00',

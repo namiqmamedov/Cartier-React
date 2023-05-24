@@ -7,6 +7,17 @@
   font-size: 22px;
   font-family: "Montserrat", sans-serif;
 }
+.login-section .radio__group-item {
+  display: block !important;
+}
+.login-section .form-date-group {
+  display: flex;
+  align-items: center;
+}
+.login-section .nav-tabs {
+  display: flex;
+  justify-content: center;
+}
 .login-section .login__wrapper {
   background-color: #f9f9f9;
   max-width: 55rem;
