@@ -26,6 +26,13 @@
   padding-bottom: 30px;
   margin-bottom: 90px;
 }
+.login-section .login__wrapper .input-error {
+  border-color: 1px solid red;
+}
+.login-section .login__wrapper .error {
+  color: red;
+  text-align: left;
+}
 .login-section .login__wrapper .login__body {
   max-width: 26rem;
   margin: 0 auto;

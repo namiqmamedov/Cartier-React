@@ -15,15 +15,25 @@ import {MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane} from 'md
 import Checkbox from '@mui/material/Checkbox';
 import { useFormik } from 'formik'
 import '../styles/login.css'
+import { basicSchema } from '../schemas'
+
+const onSubmit = async (values,actions) => {
+    await new Promise((resolve)=>{
+        setTimeout(resolve,1000)
+    });
+    actions.resetForm();
+};
 
 const Login = () => {
 
-  const {values,errors,handleChange,handleSubmit} = useFormik({
+  const {values,errors,isSubmitting,handleChange,handleSubmit} = useFormik({
     initialValues: {
       email: '',
       password: '',
       confirmPassword: '',
     },
+    validationSchema:basicSchema,
+    onSubmit,
   });
 
     const [open,
@@ -49,8 +59,8 @@ const Login = () => {
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-
-    return ( <> <div className="login-section">
+    return ( <> 
+    <div className="login-section">
         <div className="container">
             <div className="row">
                 <div className="tab-title text-center">
@@ -153,6 +163,7 @@ const Login = () => {
                             </div>
                         </MDBTabsPane>
                         <MDBTabsPane show={basicActive === 'tab2'}>
+                            <form onSubmit={handleSubmit}>
                             <div className="login__wrapper">
                                 <div className="login__body">
                                     <form action="#">
@@ -162,7 +173,7 @@ const Login = () => {
                                         </div>
                                         <FormControl>
                                             <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-                                            <RadioGroup
+                                             <RadioGroup
                                                 aria-labelledby="demo-radio-buttons-group-label"
                                                 defaultValue="female"
                                                 className='radio__group-item'
@@ -680,7 +691,10 @@ const Login = () => {
                                                 onChange={handleChange}
                                                 value={values.email}
                                                 variant="standard"
-                                                placeholder='your@email.com'/>
+                                                placeholder='your@email.com'
+                                                className={errors.email ? 'input-error' : ''}
+                                                />  
+                                                { errors.email && <p className='error'>{errors.email}</p> }
                                         </div>
                                         <div className="password">
                                             <TextField
@@ -690,7 +704,11 @@ const Login = () => {
                                                 value={values.password}
                                                 type='password'
                                                 variant="standard"
-                                                placeholder='*****'/>
+                                                placeholder='*****'
+                                                className={errors.password ? 'input-error' : ''}
+                                                />
+                                               { errors.password && <p className='error'>{errors.password}</p>  }
+
                                         </div>
                                         <div className="password">
                                             <TextField
@@ -700,18 +718,22 @@ const Login = () => {
                                                 value={values.confirmPassword}
                                                 type='password'
                                                 variant="standard"
-                                                placeholder='*****'/>
+                                                placeholder='*****'
+                                                className={errors.confirmPassword ? 'input-error' : ''}
+                                                />
+                                                { errors.password && <p className='error'>{errors.password}</p>  }
                                         </div>
 
 
                                         <FormControlLabel required control={<Checkbox />} label="Required" />
 
                                         <div className="form-actions">
-                                            <Button className='login-btn' variant="text" type='submit'>CREATE ACCOUNT</Button>
+                                            <Button disabled={isSubmitting} className='login-btn' variant="text" type='submit'>CREATE ACCOUNT</Button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
+                            </form>
                         </MDBTabsPane>
                     </MDBTabsContent>
                 </div>

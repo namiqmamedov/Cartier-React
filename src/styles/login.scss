@@ -32,6 +32,15 @@
         padding-bottom: 30px;
         margin-bottom: 90px;
 
+        .input-error{
+            border-color: 1px solid red;
+        }
+
+        .error{
+            color: red;
+            text-align: left;
+        }
+
         .login__body {
             max-width: 26rem;
             margin: 0 auto;
